@@ -14,7 +14,8 @@ redTeam = "JetBlackClover"
 redScore = "1-2"
 // blueScore = "1-2"
 blueScore = "2-1"
-title = "Midweight Scrim Gym Week 12"
+title = "Midweight Scrim Gym"
+week = "Week 12"
 overlay1 = "BroadcasterPostGame.png"
 // blueSide = "JetBlackLogo2.png"
 blueSide = "F8-logo-blue-2019.png"
@@ -26,12 +27,12 @@ eventLogo = "ScrimGymTest3.png"
 // jetblack redside width = 290 height = 178.319....
 // f8 logo width = 154 height = 190
 
-var maxRWidth = 290; // Max width for the image
-var maxRHeight = 190;    // Max height for the image
+var maxRWidth = 372; // Max width for the image
+var maxRHeight = 256;    // Max height for the image
 var ratioR = 0;  // Used for aspect ratio
 
-var maxBWidth = 275; // Max width for the image
-var maxBHeight = 190;    // Max height for the image
+var maxBWidth = 372; // Max width for the image
+var maxBHeight = 256;    // Max height for the image
 var ratioB = 0;  // Used for aspect ratio
 
 var maxLWidth = 290;
@@ -40,52 +41,59 @@ var ratioL = 0;
 
 {
 function drawTitle() {
-   ctx.font = "30px Arial";
-   ctx.textAlign = "center";
+   ctx.font = "100px Arial";
+   ctx.textAlign = "left";
    ctx.fillStyle = "white";
-   ctx.fillText(title, 960, 830);
+   ctx.fillText(title, 305, 920);
+};
+
+   function drawWeek() {
+      ctx.font = "30px Arial";
+      ctx.textAlign = "left";
+      ctx.fillStyle = "white";
+      ctx.fillText(Week, 445, 1500);
 };
 
 function drawPHBcaster() {
    ctx.font = "25px Arial";
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
-   ctx.fillText(PHBcaster, 145, 1003);
+   ctx.fillText(PHBcaster, 1521, 835);
 };
 
 function drawColorCaster() {
    ctx.font = "25px Arial";
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
-   ctx.fillText(colorCaster, 145, 1033);
+   ctx.fillText(colorCaster, 1521, 860);
 };
 
 function drawRScore() {
-   ctx.font = "15px Arial";
+   ctx.font = "35px Arial";
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
-   ctx.fillText(redScore, 1490, 1057);
+   ctx.fillText(redScore, 1513, 766);
 }
 
 function drawBScore() {
-   ctx.font = "15px Arial";
+   ctx.font = "35px Arial";
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
-   ctx.fillText(blueScore, 450, 1057);
+   ctx.fillText(blueScore, 1513, 410);
 }
 
 function drawRteam() {
-   ctx.font = "20px Arial";
-   ctx.textAlign = "center";
+   ctx.font = "50px Arial";
+   ctx.textAlign = "left";
    ctx.fillStyle = "white";
-   ctx.fillText(redTeam, 1490, 1040);
+   ctx.fillText(redTeam, 120, 497);
 }
 
 function drawBteam() {
-   ctx.font = "20px Arial";
-   ctx.textAlign = "center";
+   ctx.font = "50px Arial";
+   ctx.textAlign = "left";
    ctx.fillStyle = "white";
-   ctx.fillText(blueTeam, 450, 1040);
+   ctx.fillText(blueTeam, 120, 160);
 }
 
 function drawTest() {
@@ -137,11 +145,12 @@ imageObj1.onload = function() {
                width = width * ratioB;    // Reset width to match scaled image
                height = height * ratioB;    // Reset height to match scaled image
            }
-           xBPlacement = (137.5 - (width / 2)) + 314
+           xBPlacement = (186.5 - (width / 2)) + 1335
          //   yBPlacement = 810 - (95 + (height / 2))
 
+
          console.log(width + " " + height)
-      ctx.drawImage(imageObj2, xBPlacement, 830, width, height);
+      ctx.drawImage(imageObj2, xBPlacement, 110, width, height);
       imageObj3.src = redSide;
 
       imageObj3.onload = function() {
@@ -166,7 +175,7 @@ imageObj1.onload = function() {
             width = width * ratioR;    // Reset width to match scaled image
             height = height * ratioR;    // Reset height to match scaled image
         }
-        xRPlacement = (145 - (width / 2)) + 1345
+        xRPlacement = (186.5 - (width / 2)) + 1382
       //   yRPlacement = 810 + (93 - (height / 2))
         console.log(width + " " + height)
          ctx.drawImage(imageObj3, xRPlacement, 830, width, height);
