@@ -1,0 +1,27 @@
+
+.jumbotron {
+	background-color: whitesmoke;
+}
+
+body {
+    /* background-image: url("https://static3.depositphotos.com/1000664/184/i/950/depositphotos_1841885-stock-photo-train-in-the-station-with.jpg"); */
+    background-color: whitesmoke
+}
+/* .glyphicon{
+    background-color: whitesmoke
+} */
+
+/* .panel-heading {
+	background-color: blue;
+} */
+
+/* .panel > .panel-heading {
+    background-image: none;
+    background-color: #ddd;
+    color: grey;
+
+} */
+
+.panel-title {
+    font-weight: bold;
+}
