@@ -6,10 +6,10 @@ var imageObj3 = new Image();
 var imageObj4 = new Image();
 PHBcaster = "PHB: Jake Kelton"
 colorCaster = "Color: Axeman"
-// blueTeam = "Jet Black Clover"
-blueTeam = "Figure 8"
-// redTeam = "Figure 8"
-redTeam = "JetBlackClover"
+blueTeam = "Jet Black Clover"
+// blueTeam = "Figure 8"
+redTeam = "Figure 8"
+// redTeam = "JetBlackClover"
 // redScore = "2-1"
 redScore = "1-2"
 // blueScore = "1-2"
@@ -17,41 +17,41 @@ blueScore = "2-1"
 title = "Midweight Scrim Gym"
 week = "Week 12"
 overlay1 = "BroadcasterPostGame.png"
-// blueSide = "JetBlackLogo2.png"
-blueSide = "F8-logo-blue-2019.png"
-redSide = "JetBlackLogo2.png"
-// redSide = "F8-logo-blue-2019.png"
-eventLogo = "ScrimGymTest3.png"
-// eventLogo = "RisenEsports.png"
+blueSide = "JetBlackLogo2.png"
+// blueSide = "F8-logo-blue-2019.png"
+// redSide = "JetBlackLogo2.png"
+redSide = "F8-logo-blue-2019.png"
+// eventLogo = "ScrimGymTest3.png"
+eventLogo = "RisenEsports.png"
 
 // jetblack redside width = 290 height = 178.319....
 // f8 logo width = 154 height = 190
 
-var maxRWidth = 372; // Max width for the image
-var maxRHeight = 256;    // Max height for the image
+var maxRWidth = 352; // Max width for the image
+var maxRHeight = 246;    // Max height for the image
 var ratioR = 0;  // Used for aspect ratio
 
-var maxBWidth = 372; // Max width for the image
-var maxBHeight = 256;    // Max height for the image
+var maxBWidth = 352; // Max width for the image
+var maxBHeight = 246;    // Max height for the image
 var ratioB = 0;  // Used for aspect ratio
 
-var maxLWidth = 290;
-var maxLHeight = 170;
+var maxLWidth = 262;
+var maxLHeight = 228;
 var ratioL = 0;
 
 {
 function drawTitle() {
-   ctx.font = "100px Arial";
+   ctx.font = "90px Arial";
    ctx.textAlign = "left";
    ctx.fillStyle = "white";
-   ctx.fillText(title, 305, 920);
+   ctx.fillText(title, 305, 910);
 };
 
-   function drawWeek() {
-      ctx.font = "30px Arial";
-      ctx.textAlign = "left";
-      ctx.fillStyle = "white";
-      ctx.fillText(Week, 445, 1500);
+function drawWeek() {
+   ctx.font = "75px Arial";
+   ctx.textAlign = "left";
+   ctx.fillStyle = "white";
+   ctx.fillText(week, 313, 1000);
 };
 
 function drawPHBcaster() {
@@ -120,6 +120,7 @@ imageObj1.onload = function() {
    drawBScore();
    drawRteam();
    drawBteam();
+   drawWeek();
    // drawTest();
    imageObj2.src = blueSide;
 
@@ -145,12 +146,12 @@ imageObj1.onload = function() {
                width = width * ratioB;    // Reset width to match scaled image
                height = height * ratioB;    // Reset height to match scaled image
            }
-           xBPlacement = (186.5 - (width / 2)) + 1335
-         //   yBPlacement = 810 - (95 + (height / 2))
+           xBPlacement = (184 - (width / 2)) + 1329
+           yBPlacement = ((112 + 368) / 2) - (height / 2)
 
 
          console.log(width + " " + height)
-      ctx.drawImage(imageObj2, xBPlacement, 110, width, height);
+      ctx.drawImage(imageObj2, xBPlacement, yBPlacement, width, height);
       imageObj3.src = redSide;
 
       imageObj3.onload = function() {
@@ -175,10 +176,10 @@ imageObj1.onload = function() {
             width = width * ratioR;    // Reset width to match scaled image
             height = height * ratioR;    // Reset height to match scaled image
         }
-        xRPlacement = (186.5 - (width / 2)) + 1382
-      //   yRPlacement = 810 + (93 - (height / 2))
+        xRPlacement = (182.5 - (width / 2)) + 1331
+        yRPlacement = ((458 + 715) / 2) - (height / 2)
         console.log(width + " " + height)
-         ctx.drawImage(imageObj3, xRPlacement, 830, width, height);
+         ctx.drawImage(imageObj3, xRPlacement, yRPlacement, width, height);
          imageObj4.src = eventLogo
          imageObj4.onload = function() {
             var width = imageObj4.naturalWidth 
@@ -200,8 +201,8 @@ imageObj1.onload = function() {
                   height = height * ratioL
                }
 
-               xLPlacement = (145 - (width / 2)) + 8
-               yLPlacement = 795 + (75 - (height / 2))
+               xLPlacement = (136 - (width / 2)) + 33
+               yLPlacement = 808 + (119 - (height / 2))
             ctx.drawImage(imageObj4, xLPlacement, yLPlacement, width, height);
             var img = c.toDataURL("image/png");
             document.write('<img src="' + img + '" width="1920" height="1080"/>');
