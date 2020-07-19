@@ -1,31 +1,36 @@
-var c=document.getElementById("myCanvas");
+var c=document.getElementById("overlay2");
 var ctx=c.getContext("2d");
 var imageObj1 = new Image();
 var imageObj2 = new Image();
 var imageObj3 = new Image();
 var imageObj4 = new Image();
+
+console.log("-----------------")
+console.log("app2")
+console.log(c)
+
+
+
+blueSide2 = "F8-logo-blue-2019.png"
+redSide2 = "JetBlackLogo2.png"
+blueSide3 = "JetBlackLogo2.png"
+redSide3 = "F8-logo-blue-2019.png"
+blueSide4 = "F8-logo-blue-2019.png"
+redSide4 = "JetBlackLogo2.png"
 PHBcaster = "PHB: Jake Kelton"
 colorCaster = "Color: Axeman"
 blueTeam = "Jet Black Clover"
-// blueTeam = "Figure 8"
-redTeam = "Figure 8"
-// redTeam = "JetBlackClover"
-// redScore = "2-1"
+redTeam = "JetBlackClover"
 redScore = "1-2"
-// blueScore = "1-2"
 blueScore = "2-1"
-title = "Midweight Scrim Gym"
+title = "Lightweight Testing Grounds"
 week = "Week 12"
-overlay1 = "BroadcasterPostGame.png"
+overlay1 = "Broadcasterintermission.png"
 blueSide = "JetBlackLogo2.png"
-// blueSide = "F8-logo-blue-2019.png"
-// redSide = "JetBlackLogo2.png"
 redSide = "F8-logo-blue-2019.png"
-// eventLogo = "ScrimGymTest3.png"
 eventLogo = "RisenEsports.png"
-
-// jetblack redside width = 290 height = 178.319....
-// f8 logo width = 154 height = 190
+comingUp = "COMING UP"
+type = "Lightweight"
 
 var maxRWidth = 352; // Max width for the image
 var maxRHeight = 246;    // Max height for the image
@@ -41,59 +46,75 @@ var ratioL = 0;
 
 {
 function drawTitle() {
-   ctx.font = "90px Arial";
-   ctx.textAlign = "left";
-   ctx.fillStyle = "white";
-   ctx.fillText(title, 305, 910);
+   if (title !== null) {
+      ctx.font = "90px Arial";
+      ctx.textAlign = "left";
+      ctx.fillStyle = "white";
+      ctx.fillText(title, 305, 910);
+   }
 };
 
 function drawWeek() {
-   ctx.font = "75px Arial";
-   ctx.textAlign = "left";
-   ctx.fillStyle = "white";
-   ctx.fillText(week, 313, 1000);
+   if (week !== null) {
+      ctx.font = "75px Arial";
+      ctx.textAlign = "left";
+      ctx.fillStyle = "white";
+      ctx.fillText(week, 313, 1000);
+   }
 };
 
 function drawPHBcaster() {
-   ctx.font = "25px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(PHBcaster, 1521, 835);
+   if (PHBcaster !== null) {
+      ctx.font = "25px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(PHBcaster, 1521, 835);
+   }
 };
 
 function drawColorCaster() {
-   ctx.font = "25px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(colorCaster, 1521, 860);
+   if (colorCaster !== null) {
+      ctx.font = "25px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(colorCaster, 1521, 860);
+   }
 };
 
 function drawRScore() {
-   ctx.font = "35px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(redScore, 1513, 766);
+   if (redScore !== null) {
+      ctx.font = "35px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(redScore, 1513, 766);
+   }
 }
 
 function drawBScore() {
-   ctx.font = "35px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(blueScore, 1513, 410);
+   if (blueScore !== null) {
+      ctx.font = "35px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(blueScore, 1513, 410);
+   }
 }
 
 function drawRteam() {
-   ctx.font = "50px Arial";
-   ctx.textAlign = "left";
-   ctx.fillStyle = "white";
-   ctx.fillText(redTeam, 120, 497);
+   if (redTeam !== null) {
+      ctx.font = "50px Arial";
+      ctx.textAlign = "left";
+      ctx.fillStyle = "white";
+      ctx.fillText(redTeam, 120, 497);
+   }
 }
 
 function drawBteam() {
-   ctx.font = "50px Arial";
-   ctx.textAlign = "left";
-   ctx.fillStyle = "white";
-   ctx.fillText(blueTeam, 120, 160);
+   if (blueTeam !== null) {
+      ctx.font = "50px Arial";
+      ctx.textAlign = "left";
+      ctx.fillStyle = "white";
+      ctx.fillText(blueTeam, 120, 160);
+   }
 }
 
 function drawTest() {
@@ -104,7 +125,7 @@ function drawTest() {
    //left is 15
    //right is 315
    //bottom is 965
-   //top is 795
+   //top is 795 var.sync = false
 }
 }
 console.log(redSide.naturalWidth + " " + redSide.naturalHeight)
@@ -205,7 +226,7 @@ imageObj1.onload = function() {
                yLPlacement = 808 + (119 - (height / 2))
             ctx.drawImage(imageObj4, xLPlacement, yLPlacement, width, height);
             var img = c.toDataURL("image/png");
-            document.write('<img src="' + img + '" width="1920" height="1080"/>');
+            document.writeIn('<img src="' + img + '" width="1920" height="1080"/>');
          }
       }
    }

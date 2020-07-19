@@ -1,30 +1,38 @@
-var c=document.getElementById("myCanvas");
+var c=document.getElementById("overlay1");
 var ctx=c.getContext("2d");
 var imageObj1 = new Image();
 var imageObj2 = new Image();
 var imageObj3 = new Image();
 var imageObj4 = new Image();
+
+console.log("-----------------")
+console.log("app1")
+console.log(c)
+
+
+blueSide2 = "F8-logo-blue-2019.png"
+redSide2 = "JetBlackLogo2.png"
+blueSide3 = "JetBlackLogo2.png"
+redSide3 = "F8-logo-blue-2019.png"
+blueSide4 = "F8-logo-blue-2019.png"
+redSide4 = "JetBlackLogo2.png"
 PHBcaster = "PHB: Jake Kelton"
 colorCaster = "Color: Axeman"
-// blueTeam = "Jet Black Clover"
-blueTeam = "Figure 8"
-// redTeam = "Figure 8"
+blueTeam = "Jet Black Clover"
 redTeam = "JetBlackClover"
-// redScore = "2-1"
 redScore = "1-2"
-// blueScore = "1-2"
 blueScore = "2-1"
-title = "Midweight Scrim Gym Week 12"
-overlay1 = "Broadcaster.png"
-// blueSide = "JetBlackLogo2.png"
-blueSide = "F8-logo-blue-2019.png"
-redSide = "JetBlackLogo2.png"
-// redSide = "F8-logo-blue-2019.png"
-eventLogo = "ScrimGymTest3.png"
-// eventLogo = "RisenEsports.png"
-
-// jetblack redside width = 290 height = 178.319....
-// f8 logo width = 154 height = 190
+title = "Lightweight Testing Grounds"
+week = "Week 12"
+overlay1 = "broadcaster.png"
+overlay2 = "Broadcasterintermission.png"
+overlay3 = "Broadcasterintermission.png"
+overlay4 = "Broadcasterintermission.png"
+blueSide = "JetBlackLogo2.png"
+redSide = "F8-logo-blue-2019.png"
+eventLogo = "RisenEsports.png"
+comingUp = "COMING UP"
+type = "Lightweight"
 
 var maxRWidth = 290; // Max width for the image
 var maxRHeight = 190;    // Max height for the image
@@ -40,52 +48,66 @@ var ratioL = 0;
 
 {
 function drawTitle() {
-   ctx.font = "30px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(title, 960, 830);
+   if (title !== null) {
+      ctx.font = "30px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(title, 960, 830);
+   }
 };
 
 function drawPHBcaster() {
-   ctx.font = "25px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(PHBcaster, 145, 1003);
+   if (PHBcaster !== null) {   
+      ctx.font = "25px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(PHBcaster, 145, 1003);
+   }
 };
 
 function drawColorCaster() {
-   ctx.font = "25px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(colorCaster, 145, 1033);
+   if (colorCaster !== null) {
+      ctx.font = "25px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(colorCaster, 145, 1033);
+   }
 };
 
 function drawRScore() {
-   ctx.font = "15px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(redScore, 1490, 1057);
+   if (redScore !== null) {
+      ctx.font = "15px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(redScore, 1490, 1057);
+   }
 }
 
 function drawBScore() {
-   ctx.font = "15px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(blueScore, 450, 1057);
+   if (blueScore !== null) {
+      ctx.font = "15px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(blueScore, 450, 1057);
+   }
 }
 
 function drawRteam() {
-   ctx.font = "20px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(redTeam, 1490, 1040);
+   if (redTeam !== null) {
+      ctx.font = "20px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(redTeam, 1490, 1040);
+   }
 }
 
 function drawBteam() {
-   ctx.font = "20px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(blueTeam, 450, 1040);
+   if (blueTeam !== null) {
+      ctx.font = "20px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(blueTeam, 450, 1040);
+   }
 }
 
 function drawTest() {
@@ -138,10 +160,10 @@ imageObj1.onload = function() {
                height = height * ratioB;    // Reset height to match scaled image
            }
            xBPlacement = (137.5 - (width / 2)) + 314
-         //   yBPlacement = 810 - (95 + (height / 2))
+           yBPlacement = ((822 + 1013) / 2) - (height / 2)
 
          console.log(width + " " + height)
-      ctx.drawImage(imageObj2, xBPlacement, 830, width, height);
+      ctx.drawImage(imageObj2, xBPlacement, yBPlacement, width, height);
       imageObj3.src = redSide;
 
       imageObj3.onload = function() {
@@ -192,10 +214,10 @@ imageObj1.onload = function() {
                }
 
                xLPlacement = (145 - (width / 2)) + 8
-               yLPlacement = 795 + (75 - (height / 2))
+               yLPlacement = ((782 + 952) / 2) - (height / 2)
             ctx.drawImage(imageObj4, xLPlacement, yLPlacement, width, height);
             var img = c.toDataURL("image/png");
-            document.write('<img src="' + img + '" width="1920" height="1080"/>');
+            document.writeIn('<img src="' + img + '" width="1920" height="1080"/>');
          }
       }
    }

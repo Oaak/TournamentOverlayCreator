@@ -1,4 +1,4 @@
-var c=document.getElementById("myCanvas");
+var c=document.getElementById("overlay4");
 var ctx=c.getContext("2d");
 var imageObj1 = new Image();
 var imageObj2 = new Image();
@@ -10,28 +10,10 @@ var imageObj7 = new Image();
 var imageObj8 = new Image();
 var imageObj9 = new Image();
 var imageObj10 = new Image();
-var v = "variables.js"
+console.log("-----------------")
+console.log("app4")
+console.log(c)
 
-PHBcaster = null
-colorCaster = null
-blueTeam = null
-redTeam = null
-redScore = null
-blueScore = null
-week = null
-overlay1 = null
-blueSide = null
-redSide = null
-eventLogo = null
-comingUp = null
-type = null
-title = null
-blueSide2 = null
-blueSide3 = null
-blueSide4 = null
-redSide2 = null
-redSide3 = null
-redSide4 = null
 
 
 blueSide2 = "F8-logo-blue-2019.png"
@@ -40,30 +22,20 @@ blueSide3 = "JetBlackLogo2.png"
 redSide3 = "F8-logo-blue-2019.png"
 blueSide4 = "F8-logo-blue-2019.png"
 redSide4 = "JetBlackLogo2.png"
-
 PHBcaster = "PHB: Jake Kelton"
 colorCaster = "Color: Axeman"
 blueTeam = "Jet Black Clover"
-// blueTeam = "Figure 8"
-// redTeam = "Figure 8"
 redTeam = "JetBlackClover"
-// redScore = "2-1"
 redScore = "1-2"
-// blueScore = "1-2"
 blueScore = "2-1"
 title = "Lightweight Testing Grounds"
 week = "Week 12"
 overlay1 = "Broadcasterintermission.png"
 blueSide = "JetBlackLogo2.png"
-// blueSide = "F8-logo-blue-2019.png"
-// redSide = "JetBlackLogo2.png"
 redSide = "F8-logo-blue-2019.png"
-// eventLogo = "ScrimGymTest3.png"
 eventLogo = "RisenEsports.png"
 comingUp = "COMING UP"
-// type = "Lightweight"
-// jetblack redside width = 290 height = 178.319....
-// f8 logo width = 154 height = 190
+type = "Lightweight"
 
 var maxRWidth = 112; // Max width for the image
 var maxRHeight = 122;    // Max height for the image
@@ -173,12 +145,12 @@ function drawComingUp() {
 }
 
 function drawVS() {
-   if (blueSide !==null && redSide !==null){
-      ctx.font = "35px Arial";
-      ctx.textAlign = "center";
-      ctx.fillStyle = "white";
-      ctx.fillText("VS", 307, 556);
-   }
+   // if (blueSide !==null && redSide !==null){
+   //    ctx.font = "35px Arial";
+   //    ctx.textAlign = "center";
+   //    ctx.fillStyle = "white";
+   //    ctx.fillText("VS", 307, 556);
+   // }
    if (blueSide2 !==null && redSide2 !==null){
       ctx.font = "35px Arial";
       ctx.textAlign = "center";
@@ -218,7 +190,7 @@ function drawTest() {
    // teams 7 and 8 848
 }
 }
-console.log(redSide.naturalWidth + " " + redSide.naturalHeight)
+// console.log(redSide.naturalWidth + " " + redSide.naturalHeight)
 
 imageObj1.src = overlay1
 
@@ -525,7 +497,7 @@ imageObj1.onload = function() {
                yLPlacement = ((33 + 198) / 2) - (height / 2)
             ctx.drawImage(imageObj4, xLPlacement, yLPlacement, width, height);
             var img = c.toDataURL("image/png");
-            document.write('<img src="' + img + '" width="1920" height="1080"/>');
+            document.writeIn('<img src="' + img + '" width="1920" height="1080"/>');
          }
       }
    }

@@ -1,31 +1,35 @@
-var c=document.getElementById("myCanvas");
+var c=document.getElementById("overlay3");
 var ctx=c.getContext("2d");
 var imageObj1 = new Image();
 var imageObj2 = new Image();
 var imageObj3 = new Image();
 var imageObj4 = new Image();
+
+console.log("-----------------")
+console.log("app3")
+console.log(c)
+
+
+blueSide2 = "F8-logo-blue-2019.png"
+redSide2 = "JetBlackLogo2.png"
+blueSide3 = "JetBlackLogo2.png"
+redSide3 = "F8-logo-blue-2019.png"
+blueSide4 = "F8-logo-blue-2019.png"
+redSide4 = "JetBlackLogo2.png"
 PHBcaster = "PHB: Jake Kelton"
 colorCaster = "Color: Axeman"
 blueTeam = "Jet Black Clover"
-// blueTeam = "Figure 8"
-redTeam = "Figure 8"
-// redTeam = "JetBlackClover"
-// redScore = "2-1"
+redTeam = "JetBlackClover"
 redScore = "1-2"
-// blueScore = "1-2"
 blueScore = "2-1"
-title = "XLNC Light Testing Grounds"
+title = "Lightweight Testing Grounds"
 week = "Week 12"
-overlay1 = "BroadcasterPickAndBanPNG.png"
+overlay1 = "Broadcasterintermission.png"
 blueSide = "JetBlackLogo2.png"
-// blueSide = "F8-logo-blue-2019.png"
-// redSide = "JetBlackLogo2.png"
 redSide = "F8-logo-blue-2019.png"
-// eventLogo = "ScrimGymTest3.png"
 eventLogo = "RisenEsports.png"
-
-// jetblack redside width = 290 height = 178.319....
-// f8 logo width = 154 height = 190
+comingUp = "COMING UP"
+type = "Lightweight"
 
 var maxRWidth = 232; // Max width for the image
 var maxRHeight = 160;    // Max height for the image
@@ -41,59 +45,75 @@ var ratioL = 0;
 
 {
 function drawTitle() {
-   ctx.font = "60px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(title, 960, 470);
+   if (title !== null) {
+      ctx.font = "60px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(title, 960, 470);
+   }
 };
 
 function drawWeek() {
-   ctx.font = "50px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(week, 960, 540);
+   if (week !== null) {
+      ctx.font = "50px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(week, 960, 540);
+   }
 };
 
 function drawPHBcaster() {
-   ctx.font = "30px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(PHBcaster, 960, 995);
+   if (PHBcaster !== null) {
+      ctx.font = "30px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(PHBcaster, 960, 995);
+   }
 };
 
 function drawColorCaster() {
-   ctx.font = "30px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(colorCaster, 960, 1025);
+   if (colorCaster !== null) {
+      ctx.font = "30px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(colorCaster, 960, 1025);
+   }
 };
 
 function drawRScore() {
-   ctx.font = "35px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(redScore, 1672, 984);
+   if (redScore !== null) {
+      ctx.font = "35px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(redScore, 1672, 984);
+   }
 }
 
 function drawBScore() {
-   ctx.font = "35px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(blueScore, 247, 984);
+   if (blueScore !== null) {
+      ctx.font = "35px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(blueScore, 247, 984);
+   }
 }
 
 function drawRteam() {
-   ctx.font = "35px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(redTeam, 1273, 85);
+   if (redTeam !== null) {
+      ctx.font = "35px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(redTeam, 1273, 85);
+   }
 }
 
 function drawBteam() {
-   ctx.font = "35px Arial";
-   ctx.textAlign = "center";
-   ctx.fillStyle = "white";
-   ctx.fillText(blueTeam, 653, 85);
+   if (blueTeam !== null) {
+      ctx.font = "35px Arial";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "white";
+      ctx.fillText(blueTeam, 653, 85);
+   }
 }
 
 function drawTest() {
@@ -205,7 +225,8 @@ imageObj1.onload = function() {
                yLPlacement = 290 - (height / 2)
             ctx.drawImage(imageObj4, xLPlacement, yLPlacement, width, height);
             var img = c.toDataURL("image/png");
-            document.write('<img src="' + img + '" width="1920" height="1080"/>');
+            document.writeIn('<img src="' + img + '" width="1920" height="1080"/>');
+            document.writeIn('<script src="app4.js"></script>')
          }
       }
    }

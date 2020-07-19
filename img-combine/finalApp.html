@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IMG Combine</title>
+    <link rel="stylesheet" type="text/css" href="positioning.css">
+</head>
+
+<body>
+    <p id="p1">Hello World!</p>
+    <p>Blue Team:</p>
+    <input id="blueTeam" type="text">
+    <p>Red Team:</p>
+    <input id="redTeam" type="text">
+    <p>PHB caster:</p>
+    <input id="PHBcaster" type="text">
+    <p>Color Caster:</p>
+    <input id="colorCaster" type="text">
+    <p>Blue Score:</p>
+    <input id="blueScore" type="text">
+    <p>Red Score:</p>
+    <input id="redScore" type="text">
+    <p>Title:</p>
+    <input id="title" type="text">
+    <p>Week:</p>
+    <input id="week" type="text">
+
+    <progress value="0" max="100" id="uploader">0%</progress>
+    <input type="file" value="upload" id="redTeamImg"/>
+
+
+
+
+
+
+
+
+    <p>Click <a href="javascript:javascript:execute();">here</a></p>
+
+
+<div>
+    <canvas id="overlay1" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
+</div>
+<div>
+    <canvas id="overlay2" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
+</div>
+<div>
+    <canvas id="overlay3" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
+</div>
+<div>
+    <canvas id="overlay4" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
+</div>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAWqrqzgLoGbSA_xszsoo1zOVQu5RgLvt4",
+    authDomain: "xnlc-img-stream.firebaseapp.com",
+    databaseURL: "https://xnlc-img-stream.firebaseio.com",
+    projectId: "xnlc-img-stream",
+    storageBucket: "xnlc-img-stream.appspot.com",
+    messagingSenderId: "524795325456",
+    appId: "1:524795325456:web:c8b6c240f5515ea2956e95",
+    measurementId: "G-YGKFCRF5PB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+    <script src="finalApp.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <!-- <script src="app2.js"></script> -->
+    <!-- <script src="app3.js"></script> -->
+    <!-- <script src="app4.js"></script> -->
+
+
+</body>
+</html>
