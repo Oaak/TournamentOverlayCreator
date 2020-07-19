@@ -10,33 +10,31 @@
 <body>
     <p id="p1">Hello World!</p>
     <p>Blue Team:</p>
-    <input id="blueTeam" type="text">
+    <input id="blueTeam" type="text"><br />
     <p>Red Team:</p>
-    <input id="redTeam" type="text">
+    <input id="redTeam" type="text"><br />
     <p>PHB caster:</p>
-    <input id="PHBcaster" type="text">
+    <input id="PHBcaster" type="text"><br />
     <p>Color Caster:</p>
-    <input id="colorCaster" type="text">
+    <input id="colorCaster" type="text"><br />
     <p>Blue Score:</p>
-    <input id="blueScore" type="text">
+    <input id="blueScore" type="text"><br />
     <p>Red Score:</p>
-    <input id="redScore" type="text">
+    <input id="redScore" type="text"><br />
     <p>Title:</p>
-    <input id="title" type="text">
+    <input id="title" type="text"><br />
     <p>Week:</p>
-    <input id="week" type="text">
+    <input id="week" type="text"><br />
 
-    <progress value="0" max="100" id="uploader">0%</progress>
-    <input type="file" value="upload" id="redTeamImg"/>
-
-
-
-
-
-
-
-
-    <p>Click <a href="javascript:javascript:execute();">here</a></p>
+    <form id="teams" method="post">
+        <p>Blue Team Logo:</p>
+        <input type="file" name="fileToUpload" id="fileToUploadBlue"/><br />
+        <p>Red Team Logo:</p>
+        <input type="file" name="fileToUpload" id="fileToUploadRed"/><br />
+        <p>Event Logo:</p>
+        <input type="file" name="fileToUpload" id="fileToUploadEvent"/><br />
+        <input type="button" id="myButton" onclick="onSubmit();" value="Submit" />
+      </form>
 
 
 <div>
@@ -52,40 +50,9 @@
     <canvas id="overlay4" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
 </div>
 
-
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAWqrqzgLoGbSA_xszsoo1zOVQu5RgLvt4",
-    authDomain: "xnlc-img-stream.firebaseapp.com",
-    databaseURL: "https://xnlc-img-stream.firebaseio.com",
-    projectId: "xnlc-img-stream",
-    storageBucket: "xnlc-img-stream.appspot.com",
-    messagingSenderId: "524795325456",
-    appId: "1:524795325456:web:c8b6c240f5515ea2956e95",
-    measurementId: "G-YGKFCRF5PB"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
 </script>
 
     <script src="finalApp.js"></script>
-    <!-- <script src="app.js"></script> -->
-    <!-- <script src="app2.js"></script> -->
-    <!-- <script src="app3.js"></script> -->
-    <!-- <script src="app4.js"></script> -->
-
 
 </body>
 </html>

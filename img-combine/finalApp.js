@@ -1,84 +1,97 @@
 //START OF FIRST PAGE
 
-eventLogo = "RisenEsports.png"
-blueSide2 = "F8-logo-blue-2019.png"
-redSide2 = "JetBlackLogo2.png"
-blueSide3 = "JetBlackLogo2.png"
-redSide3 = "F8-logo-blue-2019.png"
-blueSide4 = "F8-logo-blue-2019.png"
-redSide4 = "JetBlackLogo2.png"
-PHBcaster = document.getElementById("PHBcaster").value
-colorCaster = document.getElementById("colorCaster").value
-blueTeam = document.getElementById("blueTeam").value
-redTeam = document.getElementById("redTeam").value
-redScore = document.getElementById("redScore").value
-blueScore = document.getElementById("blueScore").value
-title = document.getElementById("title").value
-week = document.getElementById("week").value
-overlay1 = "broadcaster.png"
-overlay2 =  "BroadcasterPostGame.png"
-overlay3 = "BroadcasterPickAndBanPNG.png"
-overlay4 = "Broadcasterintermission.png"
-blueSide = "JetBlackLogo2.png"
-var redSide = "soontm"
-console.log(redSide)
+var eventLogo = "soon"
+var blueSide2 = "F8-logo-blue-2019.png"
+var redSide2 = "JetBlackLogo2.png"
+var blueSide3 = "JetBlackLogo2.png"
+var redSide3 = "F8-logo-blue-2019.png"
+var blueSide4 = "F8-logo-blue-2019.png"
+var redSide4 = "JetBlackLogo2.png"
+var PHBcaster = document.getElementById("PHBcaster").value
+var colorCaster = document.getElementById("colorCaster").value
+var blueTeam = document.getElementById("blueTeam").value
+var redTeam = document.getElementById("redTeam").value
+var redScore = document.getElementById("redScore").value
+var blueScore = document.getElementById("blueScore").value
+var title = document.getElementById("title").value
+var week = document.getElementById("week").value
+var overlay1 = "broadcaster.png"
+var overlay2 =  "BroadcasterPostGame.png"
+var overlay3 = "BroadcasterPickAndBanPNG.png"
+var overlay4 = "Broadcasterintermission.png"
+var blueSide = "soon"
+var redSide = "soon"
+// console.log(redSide)
 
-// firebase code start
+function addImg(imgsrc) {
+   // var img = document.createElement("img");
+   // img.setAttribute("src", imgsrc.target.result);
+   // document.getElementById("myForm").insertBefore(img, null);
+   redSide = imgsrc.target.result
+   onSubmit2()
+ }
+    function getAsImage(theFile) {
+   var reader = new FileReader();
+   reader.readAsDataURL(theFile);
+   reader.onload = addImg;
+ }
+    function onSubmit() {
+   var uploadElement = document.getElementById('fileToUploadRed');
+   var theFile = uploadElement.files[0];
+   if (theFile.type.match("image.*")) {
+     getAsImage(theFile);
+   } else {
+     // unexpected type
+   }
+    }
 
-//   // Your web app's Firebase configuration
-//   var firebaseConfig = {
-//    apiKey: "AIzaSyAWqrqzgLoGbSA_xszsoo1zOVQu5RgLvt4",
-//    authDomain: "xnlc-img-stream.firebaseapp.com",
-//    databaseURL: "https://xnlc-img-stream.firebaseio.com",
-//    projectId: "xnlc-img-stream",
-//    storageBucket: "xnlc-img-stream.appspot.com",
-//    messagingSenderId: "524795325456",
-//    appId: "1:524795325456:web:c8b6c240f5515ea2956e95",
-//    measurementId: "G-YGKFCRF5PB"
-//  };
-//  // Initialize Firebase
-//  firebase.initializeApp(firebaseConfig);
-//  firebase.analytics();
-var storageRef = firebase.storage().ref();
-var uploader = document.getElementById('uploader');
-var redTeamImg = document.getElementById('redTeamImg');
-
-redTeamImg.addEventListener('change', function(e) {
-   // get file
-   var file = e.target.files[0];
-   // create a storage ref
-   var storageRef = firebase.storage().ref('teams/' + file.name);
-   // upload file
-   var task = storageRef.put(file);
-   // update progress bar
-   task.on('state_changed', 
-   
-      function progress(snapshot) {
-         // var percentage = (snapshot.bytesTransferred / snapshot.totalByets) * 100;
-         // uploader.value = percentage
-      }, 
-
-      function error(err) {
-
-      },
-
-      function complete() {
-
+    function addImg2(imgsrc) {
+      // var img = document.createElement("img");
+      // img.setAttribute("src", imgsrc.target.result);
+      // document.getElementById("myForm").insertBefore(img, null);
+      blueSide = imgsrc.target.result
+      onSubmit3()
+    }
+       function getAsImage2(theFile) {
+      var reader = new FileReader();
+      reader.readAsDataURL(theFile);
+      reader.onload = addImg2;
+    }
+       function onSubmit2() {
+      var uploadElement = document.getElementById('fileToUploadBlue');
+      var theFile = uploadElement.files[0];
+      if (theFile.type.match("image.*")) {
+        getAsImage2(theFile);
+      } else {
+        // unexpected type
       }
 
-   );
-});
+       }
+       function addImg3(imgsrc) {
+         // var img = document.createElement("img");
+         // img.setAttribute("src", imgsrc.target.result);
+         // document.getElementById("myForm").insertBefore(img, null);
+         eventLogo = imgsrc.target.result
+         execute()
+       }
+          function getAsImage3(theFile) {
+         var reader = new FileReader();
+         reader.readAsDataURL(theFile);
+         reader.onload = addImg3;
+       }
+          function onSubmit3() {
+         var uploadElement = document.getElementById('fileToUploadEvent');
+         var theFile = uploadElement.files[0];
+         if (theFile.type.match("image.*")) {
+           getAsImage3(theFile);
+         } else {
+           // unexpected type
+         }
+          }
 
-
-
-// firebase code end
-storageRef.child('teams').getDownloadURL().then(function(url) {
-   document.getElementById("p1").innerHTML = url;
-   })
-
-// need teams.length maybe use a for loop to display the options for imgs
 
 function execute() {
+
 var c1=document.getElementById("overlay1");
 var ctx1=c1.getContext("2d");
 var imageObj11 = new Image();
@@ -86,19 +99,12 @@ var imageObj21 = new Image();
 var imageObj31 = new Image();
 var imageObj41 = new Image();
 
-
-storageRef.child('teams/F8-logo-blue-2019.png').getDownloadURL().then(function(url) {
-redSide = url
-console.log(url)
-})
-console.log(storageRef.child('teams'))
-
 // console.log("-----------------")
 // console.log("app1")
 // console.log(c1)
 
 
-eventLogo = "RisenEsports.png"
+// eventLogo = "RisenEsports.png"
 blueSide2 = "F8-logo-blue-2019.png"
 redSide2 = "JetBlackLogo2.png"
 blueSide3 = "JetBlackLogo2.png"
@@ -117,8 +123,8 @@ overlay1 = "broadcaster.png"
 overlay2 =  "BroadcasterPostGame.png"
 overlay3 = "BroadcasterPickAndBanPNG.png"
 overlay4 = "Broadcasterintermission.png"
-blueSide = "JetBlackLogo2.png"
-// redSide = soontm
+// blueSide = "soon"
+// redSide = "soon"
 console.log(redSide)
 
 
