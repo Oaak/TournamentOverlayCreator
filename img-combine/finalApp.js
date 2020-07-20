@@ -527,7 +527,7 @@ imageObj12.onload = function() {
                yLPlacement2 = 808 + (119 - (height2 / 2))
             ctx2.drawImage(imageObj42, xLPlacement2, yLPlacement2, width2, height2);
             var img2 = c2.toDataURL("image/png");
-            document.writeln('<img src="' + img2 + '" width2="1920" height2="1080"/>');
+            document.write('<img src="' + img2 + '" width2="1920" height2="1080"/>');
          }
       }
    }
@@ -736,7 +736,7 @@ imageObj13.onload = function() {
                yLPlacement3 = 290 - (height3 / 2)
             ctx3.drawImage(imageObj43, xLPlacement3, yLPlacement3, width3, height3);
             var img3 = c3.toDataURL("image/png");
-            document.writeln('<img src="' + img3 + '" width3="1920" height3="1080"/>');
+            document.write('<img src="' + img3 + '" width3="1920" height3="1080"/>');
          }
       }
    }
