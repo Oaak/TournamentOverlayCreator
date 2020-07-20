@@ -313,7 +313,7 @@ imageObj11.onload = function() {
                yLPlacement1 = ((782 + 952) / 2) - (height1 / 2)
             ctx1.drawImage(imageObj41, xLPlacement1, yLPlacement1, width1, height1);
             var img1 = c1.toDataURL("image/png");
-            document.writeIn('<img2 src="' + img1 + '" width1="1920" height1="1080"/>');
+            document.writeIn('<img src="' + img1 + '" width1="1920" height1="1080"/>');
 
 
 
@@ -529,7 +529,7 @@ imageObj12.onload = function() {
                yLPlacement2 = 808 + (119 - (height2 / 2))
             ctx2.drawImage(imageObj42, xLPlacement2, yLPlacement2, width2, height2);
             var img2 = c2.toDataURL("image/png");
-            document.writeIn('<img3 src="' + img2 + '" width2="1920" height2="1080"/>');
+            document.writeIn('<img src="' + img2 + '" width2="1920" height2="1080"/>');
          }
       }
    }
@@ -738,7 +738,7 @@ imageObj13.onload = function() {
                yLPlacement3 = 290 - (height3 / 2)
             ctx3.drawImage(imageObj43, xLPlacement3, yLPlacement3, width3, height3);
             var img3 = c3.toDataURL("image/png");
-            document.writeIn('<img4 src="' + img3 + '" width3="1920" height3="1080"/>');
+            document.writeIn('<img src="' + img3 + '" width3="1920" height3="1080"/>');
             document.writeIn('<script src="app4.js"></script>')
          }
       }
