@@ -101,8 +101,6 @@ var imageObj41 = new Image();
 
 // console.log("-----------------")
 // console.log("app1")
-// console.log(c1)
-
 
 // eventLogo = "RisenEsports.png"
 blueSide2 = "F8-logo-blue-2019.png"
@@ -337,7 +335,7 @@ var imageObj42 = new Image();
 
 // console.log("-----------------")
 // console.log("app2")
-// console.log(c2)
+
 
 var maxRWidth2 = 352; // Max width2 for the image
 var maxRHeight2 = 246;    // Max height2 for the image
@@ -739,7 +737,7 @@ imageObj13.onload = function() {
             ctx3.drawImage(imageObj43, xLPlacement3, yLPlacement3, width3, height3);
             var img3 = c3.toDataURL("image/png");
             document.writeIn('<img src="' + img3 + '" width3="1920" height3="1080"/>');
-            document.writeIn('<script src="app4.js"></script>')
+            // document.writeIn('<script src="app4.js"></script>')
          }
       }
    }
