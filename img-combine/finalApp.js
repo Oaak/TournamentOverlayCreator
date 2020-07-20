@@ -121,17 +121,7 @@ overlay1 = "broadcaster.png"
 overlay2 =  "BroadcasterPostGame.png"
 overlay3 = "BroadcasterPickAndBanPNG.png"
 overlay4 = "Broadcasterintermission.png"
-// blueSide = "soon"
-// redSide = "soon"
 console.log(redSide)
-
-
-
-
-// eventLogo = document.getElementById("img").files[0].name
-// console.log(eventLogo)
-// comingUp = "COMING UP"
-// type = "Lightweight"
 
 var maxRWidth1 = 290; // Max width1 for the image
 var maxRHeight1 = 190;    // Max height1 for the image
