@@ -312,13 +312,6 @@ imageObj11.onload = function() {
             ctx1.drawImage(imageObj41, xLPlacement1, yLPlacement1, width1, height1);
             var img1 = c1.toDataURL("image/png");
             document.writeln('<img src="' + img1 + '" width1="1920" height1="1080"/>');
-
-
-
-
-
-            
-
          }
       }
    }   
