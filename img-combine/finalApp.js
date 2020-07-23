@@ -1,5 +1,5 @@
 //START OF FIRST PAGE
-console.log("new version mk4")
+console.log("new version mk5")
 var eventLogo = "soon"
 var blueSide2 = "F8-logo-blue-2019.png"
 var redSide2 = "JetBlackLogo2.png"
@@ -287,7 +287,7 @@ imageObj11.onload = function() {
             z.setAttribute("width", "1920")
             z.setAttribute("height", "1080")
             // z.innerHTML = img1;
-            document.body.appendChild(z);
+            document.appendChild(z);
             // document.appendChild('<img src="' + img1 + '" width1="1920" height1="1080"/>');
          }
       }
@@ -502,7 +502,7 @@ imageObj12.onload = function() {
             x.setAttribute("width", "1920")
             x.setAttribute("height", "1080")
             // z.innerHTML = img1;
-            document.body.appendChild(x);
+            document.appendChild(x);
             // document.appendChild('<img src="' + img2 + '" width2="1920" height2="1080"/>');
          }
       }
