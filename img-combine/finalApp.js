@@ -1,5 +1,5 @@
 //START OF FIRST PAGE
-
+console.log("new version")
 var eventLogo = "soon"
 var blueSide2 = "F8-logo-blue-2019.png"
 var redSide2 = "JetBlackLogo2.png"
@@ -103,7 +103,6 @@ var imageObj41 = new Image();
 // console.log("app1")
 
 // eventLogo = "RisenEsports.png"
-console.log(redSide)
 
 var maxRWidth1 = 290; // Max width1 for the image
 var maxRHeight1 = 190;    // Max height1 for the image
