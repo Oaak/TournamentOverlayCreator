@@ -1,4 +1,4 @@
-var c=document.getElementById("overlay2");
+var c=document.getElementById("overlay");
 var ctx=c.getContext("2d");
 var imageObj1 = new Image();
 var imageObj2 = new Image();
