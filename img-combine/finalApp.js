@@ -1,12 +1,12 @@
 //START OF FIRST PAGE
 console.log("new version mk8")
 var eventLogo = "soon"
-var blueSide2 = "F8-logo-blue-2019.png"
-var redSide2 = "JetBlackLogo2.png"
-var blueSide3 = "JetBlackLogo2.png"
-var redSide3 = "F8-logo-blue-2019.png"
-var blueSide4 = "F8-logo-blue-2019.png"
-var redSide4 = "JetBlackLogo2.png"
+var blueSide2 = null
+var redSide2 = null
+var blueSide3 = null
+var redSide3 = null
+var blueSide4 = null
+var redSide4 = null
 var PHBcaster = document.getElementById("PHBcaster").value
 var colorCaster = document.getElementById("colorCaster").value
 var blueTeam = document.getElementById("blueTeam").value
@@ -98,6 +98,10 @@ var imageObj11 = new Image();
 var imageObj21 = new Image();
 var imageObj31 = new Image();
 var imageObj41 = new Image();
+
+
+// var blueSide2 = blueSide
+// var redSide2 = redSide
 
 // console.log("-----------------")
 // console.log("app1")
