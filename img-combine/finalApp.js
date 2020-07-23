@@ -1,5 +1,5 @@
 //START OF FIRST PAGE
-console.log("new version mk5")
+console.log("new version mk6")
 var eventLogo = "soon"
 var blueSide2 = "F8-logo-blue-2019.png"
 var redSide2 = "JetBlackLogo2.png"
