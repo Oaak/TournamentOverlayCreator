@@ -288,7 +288,7 @@ imageObj11.onload = function() {
             z.setAttribute("height", "1080")
             // z.innerHTML = img1;
             document.appendChild(z);
-            // document.appendChild('<img src="' + img1 + '" width1="1920" height1="1080"/>');
+            // document.appendChild('<img src="' + img1 + '" width="1920" height="1080"/>');
          }
       }
    }   
@@ -497,13 +497,12 @@ imageObj12.onload = function() {
                yLPlacement2 = 808 + (119 - (height2 / 2))
             ctx2.drawImage(imageObj42, xLPlacement2, yLPlacement2, width2, height2);
             var img2 = c2.toDataURL("image/png");
-            var x = document.createElement('IMG'); // is a node
-            x.setAttribute("src", img2)
-            x.setAttribute("width", "1920")
-            x.setAttribute("height", "1080")
-            // z.innerHTML = img1;
-            document.appendChild(x);
-            // document.appendChild('<img src="' + img2 + '" width2="1920" height2="1080"/>');
+            // var x = document.createElement('IMG'); // is a node
+            // x.setAttribute("src", img2)
+            // x.setAttribute("width", "1920")
+            // x.setAttribute("height", "1080")
+            // document.appendChild(x);
+            document.appendChild('<img src="' + img2 + '" width="1920" height="1080"/>');
          }
       }
    }
@@ -712,7 +711,7 @@ imageObj13.onload = function() {
                yLPlacement3 = 290 - (height3 / 2)
             ctx3.drawImage(imageObj43, xLPlacement3, yLPlacement3, width3, height3);
             var img3 = c3.toDataURL("image/png");
-            document.appendChild('<img src="' + img3 + '" width3="1920" height3="1080"/>');
+            document.appendChild('<img src="' + img3 + '" width="1920" height="1080"/>');
          }
       }
    }
@@ -1179,7 +1178,7 @@ imageObj14.onload = function() {
                yLPlacement4 = ((33 + 198) / 2) - (height4 / 2)
             ctx4.drawImage(imageObj44, xLPlacement4, yLPlacement4, width4, height4);
             var img4 = c4.toDataURL("image/png");
-            document.appendChild('<img src="' + img4 + '" width4="1920" height4="1080"/>');
+            document.appendChild('<img src="' + img4 + '" width="1920" height="1080"/>');
          }
       }
    }
