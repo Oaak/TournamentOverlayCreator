@@ -15,10 +15,10 @@ var redScore = document.getElementById("redScore").value
 var blueScore = document.getElementById("blueScore").value
 var title = document.getElementById("title").value
 var week = document.getElementById("week").value
-var overlay1 = "broadcaster.png"
+var overlay1 = "Broadcaster.png"
 var overlay2 = "BroadcasterPostGame.png"
 var overlay3 = "BroadcasterPickAndBanPNG.png"
-var overlay4 = "Broadcasterintermission.png"
+var overlay4 = "BroadcasterIntermission.png"
 var blueSide = "soon"
 var redSide = "soon"
 // console.log(redSide)
@@ -254,9 +254,9 @@ imageObj11.onload = function() {
             height1 = height1 * ratioR1;    // Reset height1 to match scaled image
         }
         xRPlacement2 = (145 - (width1 / 2)) + 1345
-      //   yRPlacement2 = 810 + (93 - (height1 / 2))
+        yRPlacement2 = ((822 + 1013) / 2) - (height1 / 2)
         
-         ctx1.drawImage(imageObj31, xRPlacement2, 830, width1, height1);
+         ctx1.drawImage(imageObj31, xRPlacement2, yRPlacement2, width1, height1);
          imageObj41.src = eventLogo
          imageObj41.onload = function() {
             var width1 = imageObj41.naturalWidth 
