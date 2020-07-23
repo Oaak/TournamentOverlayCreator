@@ -282,7 +282,13 @@ imageObj11.onload = function() {
                yLPlacement1 = ((782 + 952) / 2) - (height1 / 2)
             ctx1.drawImage(imageObj41, xLPlacement1, yLPlacement1, width1, height1);
             var img1 = c1.toDataURL("image/png");
-            document.appendChild('<img src="' + img1 + '" width1="1920" height1="1080"/>');
+            var z = document.createElement('IMG'); // is a node
+            z.setAttribute("src", img1)
+            z.setAttribute("width", "1920")
+            z.setAttribute("height", "1080")
+            // z.innerHTML = img1;
+            document.body.appendChild(z);
+            // document.appendChild('<img src="' + img1 + '" width1="1920" height1="1080"/>');
          }
       }
    }   
