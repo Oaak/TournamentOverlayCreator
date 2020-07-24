@@ -3,39 +3,101 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>IMG Combine</title>
-    <!-- <link rel="stylesheet" type="text/css" href="positioning.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
 <body>
-    <p id="p1">Hello World!</p>
-    <p>Blue Team:</p>
-    <input id="blueTeam" type="text"><br />
-    <p>Red Team:</p>
-    <input id="redTeam" type="text"><br />
-    <p>PHB caster:</p>
-    <input id="PHBcaster" type="text"><br />
-    <p>Color Caster:</p>
-    <input id="colorCaster" type="text"><br />
-    <p>Blue Score:</p>
-    <input id="blueScore" type="text"><br />
-    <p>Red Score:</p>
-    <input id="redScore" type="text"><br />
-    <p>Title:</p>
-    <input id="title" type="text"><br />
-    <p>Week:</p>
-    <input id="week" type="text"><br />
+<div class="cointainer text-center">
+    <div class="row">
+        <div class="col">
+            Blue Team:
+        </div>
+        <div class="col">
+            Red Team:
+        </div>
+        <div class="col">
+            PHB caster:
+        </div>
+        <div class="col">
+            Color Caster:
+          </div>
+      </div>
 
-    <form id="teams" method="post">
-        <p>Blue Team Logo:</p>
-        <input type="file" name="fileToUpload" id="fileToUploadBlue"/><br />
-        <p>Red Team Logo:</p>
-        <input type="file" name="fileToUpload" id="fileToUploadRed"/><br />
-        <p>Event Logo:</p>
-        <input type="file" name="fileToUpload" id="fileToUploadEvent"/><br />
-        <input type="button" id="myButton" onclick="onSubmit();" value="Submit" />
-      </form>
+      <div class="row mb-3">
+        <div class="col">
+            <input id="blueTeam" type="text">
+        </div>
+        <div class="col">
+            <input id="redTeam" type="text">
+        </div>
+        <div class="col">
+            <input id="PHBcaster" type="text">
+        </div>
+        <div class="col">
+            <input id="colorCaster" type="text">
+          </div>
+      </div>
 
+      <div class="row">
+        <div class="col">
+            Blue Score*:
+        </div>
+        <div class="col">
+            Red Score*:
+        </div>
+        <div class="col">
+            Title:
+        </div>
+        <div class="col">
+            Week*:
+          </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+            <input id="blueScore" type="text">
+        </div>
+        <div class="col">
+            <input id="redScore" type="text">
+        </div>
+        <div class="col">
+            <input id="title" type="text">
+        </div>
+        <div class="col">
+            <input id="week" type="text">
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            Blue Team Logo:
+        </div>
+        <div class="col">
+            Red Team Logo:
+        </div>
+        <div class="col">
+            Event Logo:
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col">
+            <input type="file" name="fileToUpload" id="fileToUploadBlue"/>
+        </div>
+        <div class="col">
+            <input type="file" name="fileToUpload" id="fileToUploadRed"/>
+        </div>
+        <div class="col">
+            <input type="file" name="fileToUpload" id="fileToUploadEvent"/>
+        </div>
+      </div>
+      <div class="row mb-3">
+          <div class="col">
+              <input type="button" id="myButton" onclick="onSubmit();" value="Submit"/>
+          </div>
+      </div>
+</div>
 
 <div>
     <canvas id="overlay1" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
@@ -50,7 +112,9 @@
     <canvas id="overlay4" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
 </div>
 
-</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <script src="finalApp.js"></script>
 
