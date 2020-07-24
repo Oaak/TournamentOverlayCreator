@@ -99,6 +99,15 @@ var imageObj21 = new Image();
 var imageObj31 = new Image();
 var imageObj41 = new Image();
 
+PHBcaster = document.getElementById("PHBcaster").value
+colorCaster = document.getElementById("colorCaster").value
+blueTeam = document.getElementById("blueTeam").value
+redTeam = document.getElementById("redTeam").value
+redScore = document.getElementById("redScore").value
+blueScore = document.getElementById("blueScore").value
+title = document.getElementById("title").value
+week = document.getElementById("week").value
+
 
 // var blueSide2 = blueSide
 // var redSide2 = redSide
