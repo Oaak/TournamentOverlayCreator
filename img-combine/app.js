@@ -49,7 +49,7 @@ var ratioL = 0;
 {
 function drawTitle() {
    if (title !== null) {
-      ctx.font = "30px Arial";
+      ctx.font = "30px Tarrget regular";
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(title, 960, 830);
@@ -58,7 +58,7 @@ function drawTitle() {
 
 function drawPHBcaster() {
    if (PHBcaster !== null) {   
-      ctx.font = "25px Arial";
+      ctx.font = "25px Tarrget regular";
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(PHBcaster, 145, 1003);
@@ -67,7 +67,7 @@ function drawPHBcaster() {
 
 function drawColorCaster() {
    if (colorCaster !== null) {
-      ctx.font = "25px Arial";
+      ctx.font = "25px Tarrget regular";
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(colorCaster, 145, 1033);
@@ -76,7 +76,7 @@ function drawColorCaster() {
 
 function drawRScore() {
    if (redScore !== null) {
-      ctx.font = "15px Arial";
+      ctx.font = "15px Tarrget regular";
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(redScore, 1490, 1057);
@@ -85,7 +85,7 @@ function drawRScore() {
 
 function drawBScore() {
    if (blueScore !== null) {
-      ctx.font = "15px Arial";
+      ctx.font = "15px Tarrget regular";
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(blueScore, 450, 1057);
@@ -94,7 +94,7 @@ function drawBScore() {
 
 function drawRteam() {
    if (redTeam !== null) {
-      ctx.font = "20px Arial";
+      ctx.font = "20px Tarrget regular";
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(redTeam, 1490, 1040);
@@ -103,7 +103,7 @@ function drawRteam() {
 
 function drawBteam() {
    if (blueTeam !== null) {
-      ctx.font = "20px Arial";
+      ctx.font = "20px Tarrget regular";
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(blueTeam, 450, 1040);
@@ -111,7 +111,7 @@ function drawBteam() {
 }
 
 function drawTest() {
-   ctx.font = "20px Arial";
+   ctx.font = "20px Tarrget regular";
    // ctx.textAlign = "center";
    ctx.fillStyle = "red";
    ctx.fillText("test", 315, 795);
