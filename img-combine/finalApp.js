@@ -132,7 +132,7 @@ var ratioL1 = 0;
 {
 function drawTitle1() {
    if (title !== null) {
-      ctx1.font = "30px Tarrget regular";
+      ctx1.font = "30px Arial";
       ctx1.textAlign = "center";
       ctx1.fillStyle = "white";
       ctx1.fillText(title, 960, 830);
@@ -141,7 +141,7 @@ function drawTitle1() {
 
 function drawPHBcaster1() {
    if (PHBcaster !== null) {   
-      ctx1.font = "25px Tarrget regular";
+      ctx1.font = "25px Arial";
       ctx1.textAlign = "center";
       ctx1.fillStyle = "white";
       ctx1.fillText(PHBcaster, 145, 1003);
@@ -150,7 +150,7 @@ function drawPHBcaster1() {
 
 function drawColorCaster1() {
    if (colorCaster !== null) {
-      ctx1.font = "25px Tarrget regular";
+      ctx1.font = "25px Arial";
       ctx1.textAlign = "center";
       ctx1.fillStyle = "white";
       ctx1.fillText(colorCaster, 145, 1033);
@@ -159,7 +159,7 @@ function drawColorCaster1() {
 
 function drawRScore1() {
    if (redScore !== null) {
-      ctx1.font = "15px Tarrget regular";
+      ctx1.font = "15px Arial";
       ctx1.textAlign = "center";
       ctx1.fillStyle = "white";
       ctx1.fillText(redScore, 1490, 1057);
@@ -168,7 +168,7 @@ function drawRScore1() {
 
 function drawBScore1() {
    if (blueScore !== null) {
-      ctx1.font = "15px Tarrget regular";
+      ctx1.font = "15px Arial";
       ctx1.textAlign = "center";
       ctx1.fillStyle = "white";
       ctx1.fillText(blueScore, 450, 1057);
@@ -177,7 +177,7 @@ function drawBScore1() {
 
 function drawRteam1() {
    if (redTeam !== null) {
-      ctx1.font = "20px Tarrget regular";
+      ctx1.font = "20px Arial";
       ctx1.textAlign = "center";
       ctx1.fillStyle = "white";
       ctx1.fillText(redTeam, 1490, 1040);
@@ -186,7 +186,7 @@ function drawRteam1() {
 
 function drawBteam1() {
    if (blueTeam !== null) {
-      ctx1.font = "20px Tarrget regular";
+      ctx1.font = "20px Arial";
       ctx1.textAlign = "center";
       ctx1.fillStyle = "white";
       ctx1.fillText(blueTeam, 450, 1040);
@@ -194,7 +194,7 @@ function drawBteam1() {
 }
 
 function drawTest1() {
-   ctx1.font = "20px Tarrget regular";
+   ctx1.font = "20px Arial";
    // ctx1.textAlign = "center";
    ctx1.fillStyle = "red";
    ctx1.fillText("test", 315, 795);
@@ -335,7 +335,7 @@ var ratioL2 = 0;
 {
 function drawTitle2() {
    if (title !== null) {
-      ctx2.font = "90px Tarrget regular";
+      ctx2.font = "90px Arial";
       ctx2.textAlign = "left";
       ctx2.fillStyle = "white";
       ctx2.fillText(title, 305, 910);
@@ -344,7 +344,7 @@ function drawTitle2() {
 
 function drawWeek2() {
    if (week !== null) {
-      ctx2.font = "75px Tarrget regular";
+      ctx2.font = "75px Arial";
       ctx2.textAlign = "left";
       ctx2.fillStyle = "white";
       ctx2.fillText(week, 313, 1000);
@@ -353,7 +353,7 @@ function drawWeek2() {
 
 function drawPHBcaster2() {
    if (PHBcaster !== null) {
-      ctx2.font = "25px Tarrget regular";
+      ctx2.font = "25px Arial";
       ctx2.textAlign = "center";
       ctx2.fillStyle = "white";
       ctx2.fillText(PHBcaster, 1521, 835);
@@ -362,7 +362,7 @@ function drawPHBcaster2() {
 
 function drawColorCaster2() {
    if (colorCaster !== null) {
-      ctx2.font = "25px Tarrget regular";
+      ctx2.font = "25px Arial";
       ctx2.textAlign = "center";
       ctx2.fillStyle = "white";
       ctx2.fillText(colorCaster, 1521, 860);
@@ -371,7 +371,7 @@ function drawColorCaster2() {
 
 function drawRScore2() {
    if (redScore !== null) {
-      ctx2.font = "35px Tarrget regular";
+      ctx2.font = "35px Arial";
       ctx2.textAlign = "center";
       ctx2.fillStyle = "white";
       ctx2.fillText(redScore, 1513, 766);
@@ -380,7 +380,7 @@ function drawRScore2() {
 
 function drawBScore2() {
    if (blueScore !== null) {
-      ctx2.font = "35px Tarrget regular";
+      ctx2.font = "35px Arial";
       ctx2.textAlign = "center";
       ctx2.fillStyle = "white";
       ctx2.fillText(blueScore, 1513, 410);
@@ -389,7 +389,7 @@ function drawBScore2() {
 
 function drawRteam2() {
    if (redTeam !== null) {
-      ctx2.font = "50px Tarrget regular";
+      ctx2.font = "50px Arial";
       ctx2.textAlign = "left";
       ctx2.fillStyle = "white";
       ctx2.fillText(redTeam, 120, 497);
@@ -398,7 +398,7 @@ function drawRteam2() {
 
 function drawBteam2() {
    if (blueTeam !== null) {
-      ctx2.font = "50px Tarrget regular";
+      ctx2.font = "50px Arial";
       ctx2.textAlign = "left";
       ctx2.fillStyle = "white";
       ctx2.fillText(blueTeam, 120, 160);
@@ -406,7 +406,7 @@ function drawBteam2() {
 }
 
 function drawTest2() {
-   ctx2.font = "20px Tarrget regular";
+   ctx2.font = "20px Arial";
    // ctx2.textAlign = "center";
    ctx2.fillStyle = "red";
    ctx2.fillText("test", 315, 795);
@@ -549,7 +549,7 @@ var ratioL3 = 0;
 {
 function drawTitle3() {
    if (title !== null) {
-      ctx3.font = "60px Tarrget regular";
+      ctx3.font = "60px Arial";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(title, 960, 470);
@@ -558,7 +558,7 @@ function drawTitle3() {
 
 function drawWeek3() {
    if (week !== null) {
-      ctx3.font = "50px Tarrget regular";
+      ctx3.font = "50px Arial";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(week, 960, 540);
@@ -567,7 +567,7 @@ function drawWeek3() {
 
 function drawPHBcaster3() {
    if (PHBcaster !== null) {
-      ctx3.font = "30px Tarrget regular";
+      ctx3.font = "30px Arial";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(PHBcaster, 960, 995);
@@ -576,7 +576,7 @@ function drawPHBcaster3() {
 
 function drawColorCaster3() {
    if (colorCaster !== null) {
-      ctx3.font = "30px Tarrget regular";
+      ctx3.font = "30px Arial";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(colorCaster, 960, 1025);
@@ -585,7 +585,7 @@ function drawColorCaster3() {
 
 function drawRScore3() {
    if (redScore !== null) {
-      ctx3.font = "35px Tarrget regular";
+      ctx3.font = "35px Arial";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(redScore, 1672, 984);
@@ -594,7 +594,7 @@ function drawRScore3() {
 
 function drawBScore3() {
    if (blueScore !== null) {
-      ctx3.font = "35px Tarrget regular";
+      ctx3.font = "35px Arial";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(blueScore, 247, 984);
@@ -603,7 +603,7 @@ function drawBScore3() {
 
 function drawRteam3() {
    if (redTeam !== null) {
-      ctx3.font = "35px Tarrget regular";
+      ctx3.font = "35px Arial";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(redTeam, 1273, 85);
@@ -612,7 +612,7 @@ function drawRteam3() {
 
 function drawBteam3() {
    if (blueTeam !== null) {
-      ctx3.font = "35px Tarrget regular";
+      ctx3.font = "35px Arial";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(blueTeam, 653, 85);
@@ -620,7 +620,7 @@ function drawBteam3() {
 }
 
 function drawTest3() {
-   ctx3.font = "20px Tarrget regular";
+   ctx3.font = "20px Arial";
    // ctx3.textAlign = "center";
    ctx3.fillStyle = "red";
    ctx3.fillText("test", 315, 795);
@@ -767,7 +767,7 @@ var ratioL4 = 0;
 {
 function drawTitle4() {
    if (title !== null) {
-      ctx4.font = "40px Tarrget regular";
+      ctx4.font = "40px Arial";
       ctx4.textAlign = "center";
       ctx4.fillStyle = "white";
       ctx4.fillText(title, 307, 241);
@@ -776,7 +776,7 @@ function drawTitle4() {
 
 function drawWeek4() {
    if (week !== null) {
-      ctx4.font = "40px Tarrget regular";
+      ctx4.font = "40px Arial";
       ctx4.textAlign = "center";
       ctx4.fillStyle = "white";
       ctx4.fillText(week, 307, 346);
@@ -785,7 +785,7 @@ function drawWeek4() {
 
 // function drawType4() {
 //    if (type !== null) {
-//    ctx4.font = "40px Tarrget regular";
+//    ctx4.font = "40px Arial";
 //    ctx4.textAlign = "center";
 //    ctx4.fillStyle = "white";
 //    ctx4.fillText(type, 307, 296);
@@ -794,7 +794,7 @@ function drawWeek4() {
 
 function drawPHBcaster4() {
    if (PHBcaster !== null) {
-   ctx4.font = "30px Tarrget regular";
+   ctx4.font = "30px Arial";
    ctx4.textAlign = "center";
    ctx4.fillStyle = "white";
    ctx4.fillText(PHBcaster, 960, 995);
@@ -803,7 +803,7 @@ function drawPHBcaster4() {
 
 function drawColorCaster4() {
    if (colorCaster !== null) {
-   ctx4.font = "30px Tarrget regular";
+   ctx4.font = "30px Arial";
    ctx4.textAlign = "center";
    ctx4.fillStyle = "white";
    ctx4.fillText(colorCaster, 960, 1025);
@@ -812,7 +812,7 @@ function drawColorCaster4() {
 
 function drawRScore4() {
    if (redScore !== null) {
-   ctx4.font = "35px Tarrget regular";
+   ctx4.font = "35px Arial";
    ctx4.textAlign = "center";
    ctx4.fillStyle = "white";
    ctx4.fillText(redScore, 1672, 984);
@@ -821,7 +821,7 @@ function drawRScore4() {
 
 function drawBScore4() {
    if (blueScore !== null) {
-   ctx4.font = "35px Tarrget regular";
+   ctx4.font = "35px Arial";
    ctx4.textAlign = "center";
    ctx4.fillStyle = "white";
    ctx4.fillText(blueScore, 247, 984);
@@ -830,7 +830,7 @@ function drawBScore4() {
 
 function drawRteam4() {
    if (redTeam !== null) {
-   ctx4.font = "35px Tarrget regular";
+   ctx4.font = "35px Arial";
    ctx4.textAlign = "center";
    ctx4.fillStyle = "white";
    ctx4.fillText(redTeam, 1273, 85);
@@ -839,7 +839,7 @@ function drawRteam4() {
 
 function drawBteam4() {
    if (blueTeam !== null) {
-   ctx4.font = "35px Tarrget regular";
+   ctx4.font = "35px Arial";
    ctx4.textAlign = "center";
    ctx4.fillStyle = "white";
    ctx4.fillText(blueTeam, 653, 85);
@@ -848,7 +848,7 @@ function drawBteam4() {
 
 function drawComingUp4() {
     if (blueTeam !== null) {
-   ctx4.font = "35px Tarrget regular";
+   ctx4.font = "35px Arial";
    ctx4.textAlign = "center";
    ctx4.fillStyle = "white";
    ctx4.fillText("Coming Up", 307, 477);
@@ -857,25 +857,25 @@ function drawComingUp4() {
 
 function drawVS4() {
    if (blueSide !==null && redSide !==null){
-      ctx4.font = "35px Tarrget regular";
+      ctx4.font = "35px Arial";
       ctx4.textAlign = "center";
       ctx4.fillStyle = "white";
       ctx4.fillText("VS", 307, 556);
    }
    if (blueSide2 !==null && redSide2 !==null){
-      ctx4.font = "35px Tarrget regular";
+      ctx4.font = "35px Arial";
       ctx4.textAlign = "center";
       ctx4.fillStyle = "white";
       ctx4.fillText("VS", 307, 682);
    }
    if (blueSide3 !==null && redSide3 !==null){
-      ctx4.font = "35px Tarrget regular";
+      ctx4.font = "35px Arial";
       ctx4.textAlign = "center";
       ctx4.fillStyle = "white";
       ctx4.fillText("VS", 307, 800);
    }
    if (blueSide4 !==null && redSide4 !==null){
-      ctx4.font = "35px Tarrget regular";
+      ctx4.font = "35px Arial";
       ctx4.textAlign = "center";
       ctx4.fillStyle = "white";
       ctx4.fillText("VS", 307, 922);
@@ -883,7 +883,7 @@ function drawVS4() {
 }
 
 function drawTest4() {
-   ctx4.font = "20px Tarrget regular";
+   ctx4.font = "20px Arial";
    // ctx4.textAlign = "center";
    ctx4.fillStyle = "red";
    ctx4.fillText("test", 315, 795);
