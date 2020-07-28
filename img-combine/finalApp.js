@@ -108,8 +108,8 @@ redScore = document.getElementById("redScore").value
 blueScore = document.getElementById("blueScore").value
 title = document.getElementById("title").value
 week = document.getElementById("week").value
-fontStyle = document.getElementById("fontStyle").value
-console.log(fontStyle)
+// fontStyle = document.getElementById("fontStyle").value
+// console.log(fontStyle)
 
 
 // var blueSide2 = blueSide
