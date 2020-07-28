@@ -84,7 +84,7 @@ var ratioL = 0;
 {
 function drawTitle() {
    if (title !== null) {
-      ctx.font = "40px Arial";
+      ctx.font = "40px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(title, 307, 241);
@@ -93,7 +93,7 @@ function drawTitle() {
 
 function drawWeek() {
    if (week !== null) {
-      ctx.font = "40px Arial";
+      ctx.font = "40px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(week, 307, 346);
@@ -102,7 +102,7 @@ function drawWeek() {
 
 function drawType() {
    if (type !== null) {
-   ctx.font = "40px Arial";
+   ctx.font = "40px " + fontStyle;
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
    ctx.fillText(type, 307, 296);
@@ -111,7 +111,7 @@ function drawType() {
 
 function drawPHBcaster() {
    if (PHBcaster !== null) {
-   ctx.font = "30px Arial";
+   ctx.font = "30px " + fontStyle;
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
    ctx.fillText(PHBcaster, 960, 995);
@@ -120,7 +120,7 @@ function drawPHBcaster() {
 
 function drawColorCaster() {
    if (colorCaster !== null) {
-   ctx.font = "30px Arial";
+   ctx.font = "30px " + fontStyle;
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
    ctx.fillText(colorCaster, 960, 1025);
@@ -129,7 +129,7 @@ function drawColorCaster() {
 
 function drawRScore() {
    if (redScore !== null) {
-   ctx.font = "35px Arial";
+   ctx.font = "35px " + fontStyle;
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
    ctx.fillText(redScore, 1672, 984);
@@ -138,7 +138,7 @@ function drawRScore() {
 
 function drawBScore() {
    if (blueScore !== null) {
-   ctx.font = "35px Arial";
+   ctx.font = "35px " + fontStyle;
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
    ctx.fillText(blueScore, 247, 984);
@@ -147,7 +147,7 @@ function drawBScore() {
 
 function drawRteam() {
    if (redTeam !== null) {
-   ctx.font = "35px Arial";
+   ctx.font = "35px " + fontStyle;
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
    ctx.fillText(redTeam, 1273, 85);
@@ -156,7 +156,7 @@ function drawRteam() {
 
 function drawBteam() {
    if (blueTeam !== null) {
-   ctx.font = "35px Arial";
+   ctx.font = "35px " + fontStyle;
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
    ctx.fillText(blueTeam, 653, 85);
@@ -165,7 +165,7 @@ function drawBteam() {
 
 function drawComingUp() {
    if (comingUp !== null) {
-   ctx.font = "35px Arial";
+   ctx.font = "35px " + fontStyle;
    ctx.textAlign = "center";
    ctx.fillStyle = "white";
    ctx.fillText(comingUp, 307, 477);
@@ -174,25 +174,25 @@ function drawComingUp() {
 
 function drawVS() {
    if (blueSide !==null && redSide !==null){
-      ctx.font = "35px Arial";
+      ctx.font = "35px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText("VS", 307, 556);
    }
    if (blueSide2 !==null && redSide2 !==null){
-      ctx.font = "35px Arial";
+      ctx.font = "35px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText("VS", 307, 682);
    }
    if (blueSide3 !==null && redSide3 !==null){
-      ctx.font = "35px Arial";
+      ctx.font = "35px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText("VS", 307, 800);
    }
    if (blueSide4 !==null && redSide4 !==null){
-      ctx.font = "35px Arial";
+      ctx.font = "35px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText("VS", 307, 922);
@@ -200,7 +200,7 @@ function drawVS() {
 }
 
 function drawTest() {
-   ctx.font = "20px Arial";
+   ctx.font = "20px " + fontStyle;
    // ctx.textAlign = "center";
    ctx.fillStyle = "red";
    ctx.fillText("test", 315, 795);

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>IMG Combine</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -71,6 +72,9 @@
 
       <div class="row">
         <div class="col">
+            Font:
+        </div>
+        <div class="col">
             Blue Team Logo:
         </div>
         <div class="col">
@@ -83,6 +87,15 @@
       
       <div class="row mb-3">
         <div class="col">
+            <select name="font-style" id="fontStyle">
+                <option style="font-family: Tarrget" value="Tarrget">Tarrget</option>
+                <option style="font-family: Arial" value="Arial">Arial</option>
+                <option style="font-family: Times" value="Times">Times</option>
+                <option style="font-family: Verdana" value="Verdana">Verdana</option>
+                <option style="font-family: Cambria" value="Cambria">Cambria</option>
+            </select>
+        </div>
+        <div class="col">
             <input type="file" name="fileToUpload" id="fileToUploadBlue"/>
         </div>
         <div class="col">
@@ -91,7 +104,9 @@
         <div class="col">
             <input type="file" name="fileToUpload" id="fileToUploadEvent"/>
         </div>
+          
       </div>
+
       <div class="row mb-3">
           <div class="col">
               <input type="button" id="myButton" onclick="onSubmit();" value="Submit"/>

@@ -46,7 +46,7 @@ var ratioL = 0;
 {
 function drawTitle() {
    if (title !== null) {
-      ctx.font = "60px Arial";
+      ctx.font = "60px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(title, 960, 470);
@@ -55,7 +55,7 @@ function drawTitle() {
 
 function drawWeek() {
    if (week !== null) {
-      ctx.font = "50px Arial";
+      ctx.font = "50px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(week, 960, 540);
@@ -64,7 +64,7 @@ function drawWeek() {
 
 function drawPHBcaster() {
    if (PHBcaster !== null) {
-      ctx.font = "30px Arial";
+      ctx.font = "30px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(PHBcaster, 960, 995);
@@ -73,7 +73,7 @@ function drawPHBcaster() {
 
 function drawColorCaster() {
    if (colorCaster !== null) {
-      ctx.font = "30px Arial";
+      ctx.font = "30px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(colorCaster, 960, 1025);
@@ -82,7 +82,7 @@ function drawColorCaster() {
 
 function drawRScore() {
    if (redScore !== null) {
-      ctx.font = "35px Arial";
+      ctx.font = "35px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(redScore, 1672, 984);
@@ -91,7 +91,7 @@ function drawRScore() {
 
 function drawBScore() {
    if (blueScore !== null) {
-      ctx.font = "35px Arial";
+      ctx.font = "35px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(blueScore, 247, 984);
@@ -100,7 +100,7 @@ function drawBScore() {
 
 function drawRteam() {
    if (redTeam !== null) {
-      ctx.font = "35px Arial";
+      ctx.font = "35px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(redTeam, 1273, 85);
@@ -109,7 +109,7 @@ function drawRteam() {
 
 function drawBteam() {
    if (blueTeam !== null) {
-      ctx.font = "35px Arial";
+      ctx.font = "35px " + fontStyle;
       ctx.textAlign = "center";
       ctx.fillStyle = "white";
       ctx.fillText(blueTeam, 653, 85);
@@ -117,7 +117,7 @@ function drawBteam() {
 }
 
 function drawTest() {
-   ctx.font = "20px Arial";
+   ctx.font = "20px " + fontStyle;
    // ctx.textAlign = "center";
    ctx.fillStyle = "red";
    ctx.fillText("test", 315, 795);

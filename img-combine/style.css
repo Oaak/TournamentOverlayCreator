@@ -1,0 +1,8 @@
+@font-face {
+    src: url(fonts/tarrget.ttf);
+    font-family: Tarrget;
+}
+
+.other-font {
+    font-family: Tarrget;
+}
