@@ -338,7 +338,7 @@ var ratioL2 = 0;
 {
 function drawTitle2() {
    if (title !== null) {
-      ctx2.font = "90px " + fontStyle;
+      ctx2.font = "90px Tarrget";
       ctx2.textAlign = "left";
       ctx2.fillStyle = "white";
       ctx2.fillText(title, 305, 910);
@@ -552,7 +552,7 @@ var ratioL3 = 0;
 {
 function drawTitle3() {
    if (title !== null) {
-      ctx3.font = "60px " + fontStyle;
+      ctx3.font = "60px Tarrget";
       ctx3.textAlign = "center";
       ctx3.fillStyle = "white";
       ctx3.fillText(title, 960, 470);
@@ -770,7 +770,7 @@ var ratioL4 = 0;
 {
 function drawTitle4() {
    if (title !== null) {
-      ctx4.font = "40px " + fontStyle;
+      ctx4.font = "40px Tarrget";
       ctx4.textAlign = "center";
       ctx4.fillStyle = "white";
       ctx4.fillText(title, 307, 241);
