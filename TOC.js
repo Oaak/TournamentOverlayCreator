@@ -1,5 +1,5 @@
 //START OF FIRST PAGE
-console.log("new version mk8")
+// console.log("new version mk8")
 var eventLogo = "soon"
 var blueSide2 = null
 var redSide2 = null
@@ -15,13 +15,13 @@ var redScore = document.getElementById("redScore").value
 var blueScore = document.getElementById("blueScore").value
 var title = document.getElementById("title").value
 var week = document.getElementById("week").value
-var overlay1 = "Broadcaster.png"
-var overlay2 = "BroadcasterPostGame.png"
-var overlay3 = "BroadcasterPickAndBanPNG2.png"
-var overlay4 = "BroadcasterIntermission.png"
+var overlay1 = "img-combine/Broadcaster.png"
+var overlay2 = "img-combine/BroadcasterPostGame.png"
+var overlay3 = "img-combine/BroadcasterPickAndBanPNG2.png"
+var overlay4 = "img-combine/BroadcasterIntermission.png"
 var blueSide = "soon"
 var redSide = "soon"
-var fontStyle = "Tarrget"
+var fontStyle = "Arial"
 // console.log(redSide)
 
 function addImg(imgsrc) {
