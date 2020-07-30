@@ -135,7 +135,7 @@ var ratioL1 = 0;
 {
 function drawTitle1() {
    if (title !== null) {
-      ctx1.font = "30px " + fontStyle;
+      ctx1.font = "30px Tarrget";
       ctx1.textAlign = "center";
       ctx1.fillStyle = "white";
       ctx1.fillText(title, 960, 830);
