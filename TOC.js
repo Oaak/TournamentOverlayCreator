@@ -21,7 +21,7 @@ var overlay3 = "img-combine/BroadcasterPickAndBanPNG2.png"
 var overlay4 = "img-combine/BroadcasterIntermission.png"
 var blueSide = "soon"
 var redSide = "soon"
-var fontStyle = "Arial"
+var fontStyle = "Evogria"
 // console.log(redSide)
 
 function addImg(imgsrc) {

@@ -3,6 +3,11 @@
     font-family: Tarrget;
 }
 
+@font-face {
+    src: url(img-combine/fonts/Evogria.otf);
+    font-family: Evogria;
+}
+
 .other-font {
     font-family: Tarrget;
 }
