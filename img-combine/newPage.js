@@ -1,6 +1,4 @@
-
-
-
+// var content = "data:text/html;charset=utf-8,<head></head><body><h3>Test Document</h3></body><script>window.print();</script>"
 
 
 
