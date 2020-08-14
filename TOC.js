@@ -37,12 +37,17 @@ function addImg(imgsrc) {
    reader.onload = addImg;
  }
     function onSubmit() {
+       if (document.getElementById('fileToUPloadRed') != null) {
    var uploadElement = document.getElementById('fileToUploadRed');
    var theFile = uploadElement.files[0];
    if (theFile.type.match("image.*")) {
      getAsImage(theFile);
    } else {
      // unexpected type
+   }
+   } else {
+      redSide = document.getElementById('urlToUploadRed').value
+      onSubmit2()
    }
     }
 
@@ -59,12 +64,17 @@ function addImg(imgsrc) {
       reader.onload = addImg2;
     }
        function onSubmit2() {
+         if (document.getElementById('fileToUPloadBlue') != null) {
       var uploadElement = document.getElementById('fileToUploadBlue');
       var theFile = uploadElement.files[0];
       if (theFile.type.match("image.*")) {
         getAsImage2(theFile);
       } else {
         // unexpected type
+      }
+      } else {
+      blueSide = document.getElementById('urlToUploadBlue').value
+      onSubmit3()
       }
 
        }
@@ -81,12 +91,18 @@ function addImg(imgsrc) {
          reader.onload = addImg3;
        }
           function onSubmit3() {
+            if (document.getElementById('fileToUPloadEvent') != null) {
          var uploadElement = document.getElementById('fileToUploadEvent');
          var theFile = uploadElement.files[0];
          if (theFile.type.match("image.*")) {
            getAsImage3(theFile);
          } else {
            // unexpected type
+         }
+         } else {
+         eventLogo = document.getElementById('urlToUploadEvent').value
+         console.log (eventLogo + "////" + redSide + "////" + blueSide)
+         execute()
          }
           }
 
@@ -108,6 +124,7 @@ redScore = document.getElementById("redScore").value
 blueScore = document.getElementById("blueScore").value
 title = document.getElementById("title").value
 week = document.getElementById("week").value
+// redSide = "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png"
 // fontStyle = document.getElementById("fontStyle").value
 // console.log(fontStyle)
 
