@@ -71,20 +71,7 @@
           </div>
       </div>
 
-      <div class="row">
-        <!-- <div class="col">
-            Font:
-        </div> -->
-        <div class="col">
-            Blue Team Logo:
-        </div>
-        <div class="col">
-            Red Team Logo:
-        </div>
-        <div class="col">
-            Event Logo:
-        </div>
-      </div>
+      
       
       <div class="row mb-3">
         <!-- <div class="col">
@@ -97,16 +84,55 @@
             </select>
         </div> -->
         <div class="col">
-            <input type="url" name="urlToUpload" id="urlToUploadBlue"/> :URL or File:
-            <input type="file" name="fileToUpload" id="fileToUploadBlue"/>
+            <!-- <input type="url" name="urlToUpload" id="urlToUploadBlue"/> :URL or File:
+            <input type="file" name="fileToUpload" id="fileToUploadBlue"/> -->
+            <form>
+                Blue Team:<br>
+                <select id="blueTeamType" onchange="onSelectChange()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" id="fileToUploadBlue" accept="image/*"><br>
+                <input type="url" id="urlToUploadBlue" placeholder="Enter in a URL." disabled="disabled">
+            
+            </form>
         </div>
         <div class="col">
-            <input type="url" name="urlToUpload" id="urlToUploadRed"/> :URL or File:
-            <input type="file" name="fileToUpload" id="fileToUploadRed"/> 
+            <!-- <input type="url" name="urlToUpload" id="urlToUploadRed"/> :URL or File:
+            <input type="file" name="fileToUpload" id="fileToUploadRed"/>  -->
+            <form>
+                Red Team:<br>
+                <select id="redTeamType" onchange="onSelectChange1()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" id="fileToUploadRed" accept="image/*"><br>
+                <input type="url" id="urlToUploadRed" placeholder="Enter in a URL." disabled="disabled">
+            
+            </form>
         </div>
         <div class="col">
-            <input type="url" name="urlToUpload" id="urlToUploadEvent"/> :URL or File:
-            <input type="file" name="fileToUpload" id="fileToUploadEvent"/> 
+            <!-- <input type="url" name="urlToUpload" id="urlToUploadEvent"/> :URL or File:
+            <input type="file" name="fileToUpload" id="fileToUploadEvent"/>  -->
+            <form>
+                Event Logo:<br>
+                <select id="eventType" onchange="onSelectChange2()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" id="fileToUploadEvent" accept="image/*"><br>
+                <input type="url" id="urlToUploadEvent" placeholder="Enter in a URL." disabled="disabled">
+            
+            </form>
         </div>
           
       </div>
@@ -115,6 +141,25 @@
           <div class="col">
               <input type="button" id="myButton" onclick="onSubmit();" value="Submit"/>
           </div>
+
+          <div class="col">
+<!-- <form>
+    Choose a Profile Picture:<br>
+    <select id="profilePictureType" onchange="onSelectChange()">
+
+        <option value="1">Upload an Image</option>
+        <option value="2">Load from URL</option>
+
+    </select><br>
+
+    <input type="file" id="fileBrowse" accept="image/*"><br>
+    <input type="url" id="enterUrl" placeholder="Enter in a URL." disabled="disabled">
+
+</form> -->
+          
+          <div>
+          </div>
+        </div>
       </div>
 </div>
 

@@ -24,6 +24,33 @@ var redSide = "soon"
 var fontStyle = "Evogria"
 // console.log(redSide)
 
+
+function onSelectChange() {
+   var selectedValue = document.getElementById("blueTeamType").value;    
+   var upload = selectedValue == "1";
+
+   document.getElementById("urlToUploadBlue").disabled = upload;
+   document.getElementById("fileToUploadBlue").disabled = !upload;
+   console.log(selectedValue)
+}
+function onSelectChange1() {
+   var selectedValue = document.getElementById("redTeamType").value;    
+   var upload = selectedValue == "1";
+
+   document.getElementById("urlToUploadRed").disabled = upload;
+   document.getElementById("fileToUploadRed").disabled = !upload;
+}
+function onSelectChange2() {
+   var selectedValue = document.getElementById("eventType").value;    
+   var upload = selectedValue == "1";
+
+   document.getElementById("urlToUploadEvent").disabled = upload;
+   document.getElementById("fileToUploadEvent").disabled = !upload;
+}
+
+
+
+
 function addImg(imgsrc) {
    // var img = document.createElement("img");
    // img.setAttribute("src", imgsrc.target.result);
@@ -37,7 +64,7 @@ function addImg(imgsrc) {
    reader.onload = addImg;
  }
     function onSubmit() {
-       if (document.getElementById('fileToUPloadRed') != null) {
+       if (document.getElementById('redTeamType').value == 1) {
    var uploadElement = document.getElementById('fileToUploadRed');
    var theFile = uploadElement.files[0];
    if (theFile.type.match("image.*")) {
@@ -64,7 +91,7 @@ function addImg(imgsrc) {
       reader.onload = addImg2;
     }
        function onSubmit2() {
-         if (document.getElementById('fileToUPloadBlue') != null) {
+         if (document.getElementById('blueTeamType').value == 1) {
       var uploadElement = document.getElementById('fileToUploadBlue');
       var theFile = uploadElement.files[0];
       if (theFile.type.match("image.*")) {
@@ -91,7 +118,7 @@ function addImg(imgsrc) {
          reader.onload = addImg3;
        }
           function onSubmit3() {
-            if (document.getElementById('fileToUPloadEvent') != null) {
+            if (document.getElementById('eventType').value == 1) {
          var uploadElement = document.getElementById('fileToUploadEvent');
          var theFile = uploadElement.files[0];
          if (theFile.type.match("image.*")) {
