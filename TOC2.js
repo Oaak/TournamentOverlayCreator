@@ -13,20 +13,22 @@ var blueTeam = document.getElementById("blueTeam").value
 var redTeam = document.getElementById("redTeam").value
 var redScore = document.getElementById("redScore").value
 var blueScore = document.getElementById("blueScore").value
-var title = document.getElementById("title").value
+var title = "XLNC"
 var week = document.getElementById("week").value
 var leagueName = document.getElementById("lName").value
 var leagueScoreB = document.getElementById("blueLScore").value
 var leagueScoreR = document.getElementById("redLScore").value
-var overlay1 = "img-combine/InGameCompiled2.png"
-var overlay2 = "img-combine/BroadcasterPostGame.png"
-var overlay3 = "img-combine/BroadcasterPickAndBanPNG2.png"
-var overlay4 = "img-combine/BroadcasterIntermission.png"
+var overlay1 = "img-combine/InGameCompiled.png"
+var overlay2 = "img-combine/PostGameNexusCombined.png"
+var overlay3 = "img-combine/PickandBanOverlayCompiled.png"
+var overlay4 = "img-combine/ProdraftOverlayCombined.png"
 var blueSide = "soon"
 var redSide = "soon"
 var fontStyle = "Evogria"
 var redTeamSlider = 0
 var blueTeamSlider = 0
+var bColor = "blue"
+var rColor = "red"
 // console.log(redSide)
 {
 function bUp() {
@@ -211,8 +213,13 @@ blueTeam = document.getElementById("blueTeam").value
 redTeam = document.getElementById("redTeam").value
 redScore = document.getElementById("redScore").value
 blueScore = document.getElementById("blueScore").value
-title = document.getElementById("title").value
+title = "XLNC"
 week = document.getElementById("week").value
+leagueName = document.getElementById("lName").value
+leagueScoreB = document.getElementById("blueLScore").value
+leagueScoreR = document.getElementById("redLScore").value
+bColor = document.getElementById("blueColor").value
+rColor = document.getElementById("redColor").value
 // redSide = "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png"
 // fontStyle = document.getElementById("fontStyle").value
 // console.log(fontStyle)
@@ -412,18 +419,7 @@ imageObj11.src = overlay1
 
 imageObj11.onload = function() {
    ctx1.drawImage(imageObj11, 0, 0, 1920, 1080);
-   drawTitle1();
-   drawWeek1();
-   drawPHBcaster1();
-   drawColorCaster1();
-   drawRScore1();
-   drawBScore1();
-   drawRteam1();
-   drawBteam1();
-   drawWeek1();
-   drawLeague1();
-   drawLeagueRScore1();
-   drawLeagueBScore1();
+
    // drawTest();
    imageObj21.src = blueSide;
 
@@ -452,37 +448,21 @@ imageObj11.onload = function() {
            yBPlacement1 = cYBPlacement1 - (height1 / 2)
            //clip gang
            //x, y, width, height
-           ctx1.save();
-
-         //   let regio = new Path2D();
-         //   regio.rotate(Math.atan2(43, 32)*180/Math.PI)
-         //   regio.rect(50, 20, 100, 50)
-         //   ctx1.clip(regio, "evenodd");
-         //   ctx1.fill()
-
-         
-         //   ctx1.beginPath();
-         // //   ctx1.globalAlpha = 0
-         // //   ctx1.strokeStyle = "rgba(0, 0, 0, 0)"
-         // //   ctx1.strokeWidth = 0
-         //   ctx1.moveTo(551, -10);
-         //   ctx1.lineTo(582, 42);
-         //   ctx1.lineTo(551, 42);
-         //   ctx1.lineTo(551, 0);
-         // //   ctx1.globalAlpha = 1
-         // //   ctx1.fillStyle = "red";
-         // //   ctx1.stroke();
-         // //   ctx1.globalAlpha = 1
-         // //   ctx1.fill();
-           ctx1.restore();
-
            ctx1.save()
            let region = new Path2D();
-           region.rect(158, 0, 1920, 42);
-           region.rect(0, 0, 25, 42);
-           region.rect(25, 0, 133, 26);
+           region.rect(158, 0, 1920, 44);
+           region.rect(0, 0, 27, 44);
+           region.rect(27, 0, 131, 27);
+
+           var grd = ctx1.createLinearGradient(0, 0, 600, 0);
+           grd.addColorStop(0, bColor);
+           grd.addColorStop(1, "transparent");
+           
+           // Fill with gradient
            ctx1.stroke()
            ctx1.clip(region, "evenodd");
+           ctx1.fillStyle = grd;
+           ctx1.fillRect(0, 0, 2000, 50); 
            ctx1.globalAlpha = 0.6;
 
 
@@ -527,13 +507,18 @@ imageObj11.onload = function() {
            //x, y, width, height
            ctx1.save();
            let region = new Path2D();
-           region.rect(1710, 0, 50, 42); 
-           region.rect(1892, 0, 25, 42);
-           region.rect(1760, 0, 133, 26);
-         //   ctx1.moveTo(551, 0)
-         //   ctx1.lineTo(582, 42)
+           region.rect(1350, 0, 410, 44); 
+           region.rect(1893, 0, 100, 44);
+           region.rect(1760, 0, 133, 27);
+
+         var grd1 = ctx1.createLinearGradient(1350, 0, 1950, 0);
+         grd1.addColorStop(0, "transparent");
+         grd1.addColorStop(1, rColor);
+         // Fill with gradient
            ctx1.stroke()
            ctx1.clip(region, "evenodd");
+           ctx1.fillStyle = grd1;
+           ctx1.fillRect(1350, 0, 1320, 50); 
            ctx1.globalAlpha = 0.6;
 
 
@@ -571,6 +556,19 @@ imageObj11.onload = function() {
                // yLPlacement1 = ((782 + 952) / 2) - (height1 / 2)
                xLPlacement1 = cXLPacement1 - (width1 / 2)
                yLPlacement1 = cYLPacement1 - (height1 / 2)
+
+               drawTitle1();
+               drawWeek1();
+               drawPHBcaster1();
+               drawColorCaster1();
+               drawRScore1();
+               drawBScore1();
+               drawRteam1();
+               drawBteam1();
+               drawWeek1();
+               drawLeague1();
+               drawLeagueRScore1();
+               drawLeagueBScore1();
                
             ctx1.drawImage(imageObj41, xLPlacement1, yLPlacement1, width1, height1);
             var img1 = c1.toDataURL("image/png");

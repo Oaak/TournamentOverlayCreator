@@ -25,6 +25,9 @@
         <div class="col">
             Color Caster:
           </div>
+          <div class="col">
+            League Title
+        </div>
       </div>
 
       <div class="row mb-3">
@@ -40,6 +43,9 @@
         <div class="col">
             <input id="colorCaster" type="text">
           </div>
+          <div class="col">
+            <input id="lName" type="text">
+        </div>
       </div>
 
       <div class="row">
@@ -50,7 +56,10 @@
             Red Series Score*:
         </div>
         <div class="col">
-            Org Name:
+            Blue League Score*:
+        </div>
+        <div class="col">
+            Red League Score*:
         </div>
         <div class="col">
             Week*: (example: Week 3)
@@ -64,36 +73,16 @@
             <input id="redScore" type="text">
         </div>
         <div class="col">
-            <input id="title" type="text">
-        </div>
-        <div class="col">
-            <input id="week" type="text">
-          </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-            Blue League Score*:
-        </div>
-        <div class="col">
-            Red League Score*:
-        </div>
-        <div class="col">
-            League Title:
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col">
             <input id="blueLScore" type="text">
         </div>
         <div class="col">
             <input id="redLScore" type="text">
         </div>
         <div class="col">
-            <input id="lName" type="text">
-        </div>
+            <input id="week" type="text">
+          </div>
       </div>
+
 
 
       <div class="row mb-3">
@@ -130,6 +119,7 @@
 
                 <input type="button" id="bUpId" onmousedown="bUp();" value="&#8593;"><br>
                 <input type="button" id="bDownId" onmousedown="bDown();" value="&#8595;"><br>
+                <input type="color" id="blueColor" value="blue"><br>
                 <output id="blueSlider"></output>
 
             </form>
@@ -150,6 +140,7 @@
                 <input type="url" class="formI" id="urlToUploadRed" placeholder="Enter in a URL." disabled="disabled"><br>
                 <input type="button" id="rUpId" onmousedown="rUp();" value="&#8593;"><br>
                 <input type="button" id="rDownId" onmousedown="rDown();" value="&#8595;"><br>
+                <input type="color" id="redColor" value="red"><br>
                 <output id="redSlider"></output>
             
             </form>
@@ -171,6 +162,23 @@
             
             </form>
         </div>
+        <!-- <form>
+            Blue Team:<br>
+            <select id="blueTeamType" onchange="teamNumChange()">
+        
+                <option value="1">Upload an Image</option>
+                <option value="2">Load from URL</option>
+        
+            </select><br> -->
+        
+            <!-- <input type="file" class="formI" id="fileToUploadBlue" accept="image/*"><br>
+            <input type="url" class="formI" id="urlToUploadBlue" placeholder="Enter in a URL." disabled="disabled"><br>
+
+            <input type="button" id="bUpId" onmousedown="bUp();" value="&#8593;"><br>
+            <input type="button" id="bDownId" onmousedown="bDown();" value="&#8595;"><br>
+            <output id="blueSlider"></output> -->
+
+        <!-- </form> -->
           
       </div>
 
