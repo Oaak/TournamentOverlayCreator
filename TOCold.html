@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Overlay, Tournament, Creator, Maker, XLNC, esports">
+    <title>IMG Combine</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div class="cointainer text-center">
+    <div class="row">
+        <div class="col">
+            Blue Team:
+        </div>
+        <div class="col">
+            Red Team:
+        </div>
+        <div class="col">
+            PHB caster:
+        </div>
+        <div class="col">
+            Color Caster:
+          </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+            <input id="blueTeam" type="text" maxlength="30">
+        </div>
+        <div class="col">
+            <input id="redTeam" type="text" maxlength="30">
+        </div>
+        <div class="col">
+            <input id="PHBcaster" type="text">
+        </div>
+        <div class="col">
+            <input id="colorCaster" type="text">
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            Blue Score*:
+        </div>
+        <div class="col">
+            Red Score*:
+        </div>
+        <div class="col">
+            Title:
+        </div>
+        <div class="col">
+            Week*:
+          </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+            <input id="blueScore" type="text">
+        </div>
+        <div class="col">
+            <input id="redScore" type="text">
+        </div>
+        <div class="col">
+            <input id="title" type="text">
+        </div>
+        <div class="col">
+            <input id="week" type="text">
+          </div>
+      </div>
+
+      <div class="row mb-3">
+          <div class="col">
+          Google Drive URLs currently do not work
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <!-- <div class="col">
+            <select name="font-style" id="fontStyle">
+                <option style="font-family: Tarrget;" value="Tarrget">Tarrget</option>
+                <option style="font-family: Arial;" value="Arial">Arial</option>
+                <option style="font-family: Times;" value="Times">Times</option>
+                <option style="font-family: Verdana;" value="Verdana">Verdana</option>
+                <option style="font-family: Cambria;" value="Cambria">Cambria</option>
+            </select>
+        </div> -->
+        <div class="col">
+            <!-- <input type="url" name="urlToUpload" id="urlToUploadBlue"/> :URL or File:
+            <input type="file" name="fileToUpload" id="fileToUploadBlue"/> -->
+            <form>
+                Blue Team:<br>
+                <select id="blueTeamType" onchange="onSelectChange()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadBlue" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadBlue" placeholder="Enter in a URL." disabled="disabled">
+            
+            </form>
+        </div>
+        <div class="col">
+            <!-- <input type="url" name="urlToUpload" id="urlToUploadRed"/> :URL or File:
+            <input type="file" name="fileToUpload" id="fileToUploadRed"/>  -->
+            <form>
+                Red Team:<br>
+                <select id="redTeamType" onchange="onSelectChange1()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadRed" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadRed" placeholder="Enter in a URL." disabled="disabled">
+            
+            </form>
+        </div>
+        <div class="col">
+            <!-- <input type="url" name="urlToUpload" id="urlToUploadEvent"/> :URL or File:
+            <input type="file" name="fileToUpload" id="fileToUploadEvent"/>  -->
+            <form>
+                Event Logo:<br>
+                <select id="eventType" onchange="onSelectChange2()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadEvent" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadEvent" placeholder="Enter in a URL." disabled="disabled">
+            
+            </form>
+        </div>
+          
+      </div>
+
+      <div class="row mb-3">
+          <div class="col">
+              <input type="button" id="myButton" onclick="onSubmit();" value="Submit"/>
+          </div>
+
+
+<!-- <form>
+    Choose a Profile Picture:<br>
+    <select id="profilePictureType" onchange="onSelectChange()">
+
+        <option value="1">Upload an Image</option>
+        <option value="2">Load from URL</option>
+
+    </select><br>
+
+    <input type="file" id="fileBrowse" accept="image/*"><br>
+    <input type="url" id="enterUrl" placeholder="Enter in a URL." disabled="disabled">
+
+</form> -->
+          
+          </div>
+        </div>
+      </div>
+</div>
+
+<div>
+    <canvas id="overlay1" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
+</div>
+<div>
+    <canvas id="overlay2" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
+</div>
+<div>
+    <canvas id="overlay3" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
+</div>
+<div>
+    <canvas id="overlay4" width="1920" height="1080" style="width: 1920; height: 1080;"></canvas>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="TOC.js"></script>
+
+</body>
+</html>
