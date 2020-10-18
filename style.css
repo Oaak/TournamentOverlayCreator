@@ -1,8 +1,8 @@
 body {
     
-    background-color: #222;
+    background-color: #2C2F33;
     color: #e6e6e6;
-    border-color: #708090;
+    border-color: #23272A;
     text-shadow:     
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -11,21 +11,21 @@ body {
 }
 
 input {
-    background-color: #222;
+    background-color: #2C2F33;
     color: #e6e6e6;
-    border-color: #708090;
+    border-color: #23272A;
 }
 
 select {
-    background-color: #222;
+    background-color: #2C2F33;
     color: #e6e6e6;
-    border-color: #708090;
+    border-color: #23272A;
 }
 
 .formI {
-    background-color: #222;
+    background-color: #2C2F33;
     color: #e6e6e6;
-    border-color: #708090;
+    border-color: #23272A;
 }
 
 @font-face {
