@@ -14,10 +14,10 @@
 <div class="cointainer text-center">
     <div class="row">
         <div class="col">
-            Blue Team:
+            Blue Team*:
         </div>
         <div class="col">
-            Red Team:
+            Red Team*:
         </div>
         <div class="col">
             PHB caster:
@@ -26,7 +26,7 @@
             Color Caster:
           </div>
           <div class="col">
-            League Title
+            League Title*
         </div>
       </div>
 
@@ -50,20 +50,53 @@
 
       <div class="row">
         <div class="col">
-            Blue Series Score*:
+            Blue Tag (TSM, C9, ECT...)*:
         </div>
         <div class="col">
-            Red Series Score*:
+            Red Tag (TL, FLYQ, ECT...)*:
         </div>
         <div class="col">
-            Blue League Score*:
+            PHB caster Twitter*:
         </div>
         <div class="col">
-            Red League Score*:
-        </div>
-        <div class="col">
-            Week*: (example: Week 3)
+            Color Caster Twitter*:
           </div>
+          <div class="col">
+            Week: (example: Week 3)
+          </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+            <input id="blueTag" type="text" maxlength="30">
+        </div>
+        <div class="col">
+            <input id="redTag" type="text" maxlength="30">
+        </div>
+        <div class="col">
+            <input id="PHBcasterT" type="text">
+        </div>
+        <div class="col">
+            <input id="colorCasterT" type="text">
+          </div>
+          <div class="col">
+            <input id="week" type="text">
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            Blue Series Score:
+        </div>
+        <div class="col">
+            Red Series Score:
+        </div>
+        <div class="col">
+            Blue League Score:
+        </div>
+        <div class="col">
+            Red League Score:
+        </div>
       </div>
       <div class="row mb-3">
         <div class="col">
@@ -78,9 +111,6 @@
         <div class="col">
             <input id="redLScore" type="text">
         </div>
-        <div class="col">
-            <input id="week" type="text">
-          </div>
       </div>
 
 
@@ -103,8 +133,6 @@
             </select>
         </div> -->
         <div class="col">
-            <!-- <input type="url" name="urlToUpload" id="urlToUploadBlue"/> :URL or File:
-            <input type="file" name="fileToUpload" id="fileToUploadBlue"/> -->
             <form>
                 Blue Team:<br>
                 <select id="blueTeamType" onchange="onSelectChange()">
@@ -118,9 +146,13 @@
                 <input type="url" class="formI" id="urlToUploadBlue" placeholder="Enter in a URL." disabled="disabled"><br>
 
                 <input type="button" id="bUpId" onmousedown="bUp();" value="&#8593;"><br>
-                <input type="button" id="bDownId" onmousedown="bDown();" value="&#8595;"><br>
+                <input type="button" id="bLeftId" onmousedown="bLeft();" value="&#8592;">
+                <input type="button" id="bDownId" onmousedown="bDown();" value="&#8595;">
+                <input type="button" id="bRightId" onmousedown="bRight();" value="&#8594;"><br>
                 <input type="color" id="blueColor" value="blue"><br>
-                <output id="blueSlider"></output>
+                <output id="blueSliderx" value="0"></output>
+                <output id="blueSlider" value="0"></output>
+                
 
             </form>
         </div>
@@ -139,9 +171,12 @@
                 <input type="file" class="formI" id="fileToUploadRed" accept="image/*"><br>
                 <input type="url" class="formI" id="urlToUploadRed" placeholder="Enter in a URL." disabled="disabled"><br>
                 <input type="button" id="rUpId" onmousedown="rUp();" value="&#8593;"><br>
-                <input type="button" id="rDownId" onmousedown="rDown();" value="&#8595;"><br>
+                <input type="button" id="rLeftId" onmousedown="rLeft();" value="&#8592;">
+                <input type="button" id="rDownId" onmousedown="rDown();" value="&#8595;">
+                <input type="button" id="rRightId" onmousedown="rRight();" value="&#8594;"><br>
                 <input type="color" id="redColor" value="red"><br>
-                <output id="redSlider"></output>
+                <output id="redSliderx" value="0"></output>
+                <output id="redSlider" value="0"></output>
             
             </form>
         </div>
@@ -161,50 +196,119 @@
                 <input type="url" class="formI" id="urlToUploadEvent" placeholder="Enter in a URL." disabled="disabled">
             
             </form>
-        </div>
-        <!-- <form>
-            Blue Team:<br>
-            <select id="blueTeamType" onchange="teamNumChange()">
-        
-                <option value="1">Upload an Image</option>
-                <option value="2">Load from URL</option>
-        
-            </select><br> -->
-        
-            <!-- <input type="file" class="formI" id="fileToUploadBlue" accept="image/*"><br>
-            <input type="url" class="formI" id="urlToUploadBlue" placeholder="Enter in a URL." disabled="disabled"><br>
+        </div>        
 
-            <input type="button" id="bUpId" onmousedown="bUp();" value="&#8593;"><br>
-            <input type="button" id="bDownId" onmousedown="bDown();" value="&#8595;"><br>
-            <output id="blueSlider"></output> -->
-
-        <!-- </form> -->
           
       </div>
+
+        <div class="row mb-3">
+            <!-- <div class="col">
+                advanced?
+                <input type="checkbox" id="schedule" onclick="scheduleBox();" value="Submit"/>
+            </div> -->
+            <div class="col">
+                switch sides
+                <input type="checkbox" id="switchSBox" onclick="switchSides();" value="Submit"/>
+            </div>
+      </div>
+      <div class="row mb-3">
+          <select id="currentSeries" style="display:none">
+            <option value="1">Game 1</option>
+            <option value="2">Game 2</option>
+            <option value="3">Game 3</option>
+            <option value="4">Game 4</option>
+        </select>
+      </div>
+      <div class="row mb-3">
+        <div class="col" id="scheduleForm" style="display:none">
+            <form>
+                Blue Team:<br>
+                <select id="blueTeam2Type" onchange="onSelectChange4()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadBlue2" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadBlue2" placeholder="Enter in a URL." disabled="disabled"><br>
+
+                Red Team:<br>
+                <select id="redTeam2Type" onchange="onSelectChange5()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadRed2" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadRed2" placeholder="Enter in a URL." disabled="disabled"><br>
+
+            </form>
+        </div>
+        <div class="col" id="scheduleForm2" style="display:none">
+            <form>
+                Blue Team:<br>
+                <select id="blueTeam2Type" onchange="onSelectChange6()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadBlue3" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadBlue3" placeholder="Enter in a URL." disabled="disabled"><br>
+
+                Red Team:<br>
+                <select id="redTeam2Type" onchange="onSelectChange7()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadRed3" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadRed3" placeholder="Enter in a URL." disabled="disabled"><br>
+
+            </form>
+            </div>
+
+        <div class="col" id="scheduleForm3" style="display:none">
+            <form>
+                Blue Team:<br>
+                <select id="blueTeam2Type" onchange="onSelectChange8()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadBlue3" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadBlue3" placeholder="Enter in a URL." disabled="disabled"><br>
+
+                Red Team:<br>
+                <select id="redTeam2Type" onchange="onSelectChange9()">
+            
+                    <option value="1">Upload an Image</option>
+                    <option value="2">Load from URL</option>
+            
+                </select><br>
+            
+                <input type="file" class="formI" id="fileToUploadRed3" accept="image/*"><br>
+                <input type="url" class="formI" id="urlToUploadRed3" placeholder="Enter in a URL." disabled="disabled"><br>
+
+            </form>
+            </div>
+      </div>
+
 
       <div class="row mb-3">
           <div class="col">
               <input type="button" id="myButton" onclick="onSubmit();" value="Submit"/>
           </div>
-
-
-<!-- <form>
-    Choose a Profile Picture:<br>
-    <select id="profilePictureType" onchange="onSelectChange()">
-
-        <option value="1">Upload an Image</option>
-        <option value="2">Load from URL</option>
-
-    </select><br>
-
-    <input type="file" id="fileBrowse" accept="image/*"><br>
-    <input type="url" id="enterUrl" placeholder="Enter in a URL." disabled="disabled">
-
-</form> -->
-          
-          </div>
-        </div>
       </div>
+          
+
 </div>
 
 <div>

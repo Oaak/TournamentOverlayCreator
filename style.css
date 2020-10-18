@@ -1,3 +1,33 @@
+body {
+    
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #708090;
+    text-shadow:     
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+}
+
+input {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #708090;
+}
+
+select {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #708090;
+}
+
+.formI {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #708090;
+}
+
 @font-face {
     src: url(img-combine/fonts/tarrget.ttf);
     font-family: Tarrget;
@@ -19,3 +49,6 @@
 .sliderInstructions {
     margin: 0, 0, 0, 0;
 }
+
+
+
