@@ -2486,4 +2486,3 @@ imageObj14.onload = function() {
 };
 }						
 }
-onSubmit();
