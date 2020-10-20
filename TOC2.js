@@ -26,6 +26,7 @@ var scheduleImg4G = "img-combine/ScheduleSmall4Box-01.png"
 var scheduleImg3G = "img-combine/ScheduleSmall3Box-01.png"
 var scheduleImg2G = "img-combine/ScheduleSmall2Box-01.png"
 var scheduleImg1G = "img-combine/ScheduleSmall1Box-01.png"
+var overlay5 = scheduleImg1G
 var blueSide = "soon"
 var redSide = "soon"
 var fontStyle = "Evogria"
@@ -729,8 +730,8 @@ imageObj11.onload = function() {
 
                drawTitle1();
                drawWeek1();
-               drawPHBcaster1();
-               drawColorCaster1();
+               // drawPHBcaster1();
+               // drawColorCaster1();
                drawRScore1();
                drawBScore1();
                drawRteam1();
@@ -2484,5 +2485,523 @@ imageObj14.onload = function() {
       }
    }
 };
-}						
-}
+}	
+
+
+//START OF SECOND PAGE
+{
+   var c5=document.getElementById("overlay5");
+   var ctx5=c5.getContext("2d");
+   var imageObj15 = new Image();
+   var imageObj25 = new Image();
+   var imageObj35 = new Image();
+   var imageObj45 = new Image();
+   var imageObjSchedule5 = new Image();
+   var imageObj55 = new Image();
+   var imageObj65 = new Image();
+   
+   // console.log("-----------------")
+   // console.log("app2")
+   
+   
+   var maxRWidth5 = 64; // Max width1 for the image
+   var maxRHeight5 = 64;    // Max height1 for the image
+   var ratioR5 = 0;  // Used for aspect ratio
+   
+   var maxBWidth5 = 64; // Max width1 for the image
+   var maxBHeight5 = 64;    // Max height1 for the image
+   var ratioB5 = 0;  // Used for aspect ratio
+   
+   var maxLWidth5 = 91;
+   var maxLHeight5 = 110;
+   var ratioL5 = 0;
+   
+   var maxRWidth25 = 210; // Max width1 for the image
+   var maxRHeight25 = 185;    // Max height1 for the image
+   var ratioR25 = 0;  // Used for aspect ratio
+   
+   var maxBWidth25 = 210; // Max width1 for the image
+   var maxBHeight25 = 185;    // Max height1 for the image
+   var ratioB25 = 0;  // Used for aspect ratio
+   
+   var maxLWidth25 = 91;
+   var maxLHeight25 = 110;
+   var ratioL25 = 0;
+   
+   //coordinates
+   
+   if(switchS.checked == false) {
+      blueTeamSliderxs = blueTeamSliderx
+      blueTeamSliders = blueTeamSlider
+      redTeamSliders = redTeamSlider
+      redTeamSliderxs = redTeamSliderx
+      } else {
+         blueTeamSliderxs = redTeamSliderx * -1
+         blueTeamSliders = redTeamSlider
+         redTeamSliders = blueTeamSlider
+         redTeamSliderxs = blueTeamSliderx * -1
+      }
+   
+   
+   cTitle5x = 110
+   cTitle5y = 1022
+   cWeek5x = 110
+   cWeek5y = 1072
+   cLeague5x = 110
+   cLeague5y = 1047
+   cPHBcaster5x = 1521
+   cPHBcaster5y = 835
+   cColorCaster5x = 1521
+   cColorCaster5y = 860
+   cRedScore5x = ((518 + 529)/2)
+   cRedScore5y = ((793 + 861)/2) + 16
+   cBlueScore5x = ((518 + 529)/2)
+   cBlueScore5y = ((57 + 125) /2) + 16
+   cLeagueBS5x = 400
+   cLeagueBS5y = ((57 + 125) /2) + 15
+   cLeagueRS5x = 400
+   cLeagueRS5y = ((793 + 861)/2) + 15
+   cRedTeam5x = 271
+   cRedTeam5y = ((793 + 861)/2) + 8
+   cBlueTeam5x = 271
+   cBlueTeam5y = ((57 + 125)/2) + 8
+   cXLPacement5 = (0 + 110)/2
+   cYLPacement5 = (960 + 1080)/2
+   cXBPlacement5 = ((424 + 562)/2) 
+   cYBPlacement5 = ((964 + 1026)/2) 
+   cXRPlacement5 = ((360 + 544)/2) 
+   cYRPlacement5 = ((1028 + 1080)/2)
+   cBTag5x = (480 + 681)/2
+   cBTag5y = ((964 + 1026)/2) + 15
+   cRTag5x = (431 + 634)/2
+   cRTag5y = ((1028 + 1080)/2) + 15
+   
+   cBlueScore25x = (637 + 753)/2
+   cBlueScore25y = ((964 + 1026)/2) + 15
+   cRedScore25x = (705 + 587)/2
+   cRedScore25y = ((1028 + 1080)/2) + 15
+   
+   //cRedScore22x, cRedScore22y
+   //cLeagueBS2x = (637 + 753)/2
+   // cLeagueBS2y = ((950 + 1012)/2) + 10
+   // cLeagueRS2x = (705 + 587)/2
+   // cLeagueRS2y = ((1014 + 1080)/2) + 10
+   
+   cXBPlacement25 = (217/2) - blueTeamSliderxs
+   cYBPlacement25 = ((57 + 125)/2) - blueTeamSliders
+   cXRPlacement25 = (217/2) - redTeamSliderxs
+   cYRPlacement25 = ((793 + 861)/2) - redTeamSliders
+   
+   {
+      function drawTitle5() {
+         if (title !== null) {
+            ctx5.font = "60px " + fontStyle;
+            ctx5.textAlign = "left";
+            ctx5.fillStyle = "white";
+            ctx5.fillText(title, cTitle5x, cTitle5y);
+         }
+      };
+   
+      function drawBTag5() {
+         if (week !== null) {
+            ctx5.font = "30px " + fontStyle;
+            ctx5.textAlign = "center";
+            ctx5.fillStyle = "white";
+            ctx5.fillText(bTag, cBTag5x, cBTag5y);
+         }
+      };
+   
+      function drawRTag5() {
+         if (week !== null) {
+            ctx5.font = "30px " + fontStyle;
+            ctx5.textAlign = "center";
+            ctx5.fillStyle = "white";
+            ctx5.fillText(rTag, cRTag5x, cRTag5y);
+         }
+      };
+      
+      function drawWeek5() {
+         if (week !== null) {
+            ctx5.font = "20px " + fontStyle;
+            ctx5.textAlign = "left";
+            ctx5.fillStyle = "white";
+            ctx5.fillText(week, cWeek5x, cWeek5y);
+         }
+      };
+      
+      function drawLeague5() {
+         if (leagueName !== null) {
+            ctx5.font = "20px " + fontStyle;
+            ctx5.textAlign = "left";
+            ctx5.fillStyle = "white";
+            ctx5.fillText(leagueName, cLeague5x, cLeague5y);
+         }
+      };
+   
+   function drawLeagueRScore5() {
+      if (leagueScoreR !== null) {
+         ctx5.font = "30px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         ctx5.fillText(leagueScoreR, cLeagueRS5x, cLeagueRS5y);
+      }
+   };
+   
+   function drawLeagueBScore5() {
+      if (leagueScoreB !== null) {
+         ctx5.font = "30px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         ctx5.fillText(leagueScoreB, cLeagueBS5x, cLeagueBS5y);
+      }
+   };
+   
+   function drawPHBcaster5() {
+      if (PHBcaster !== null) {
+         ctx5.font = "25px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         ctx5.fillText(PHBcaster, cPHBcaster5x, cPHBcaster5y);
+      }
+   };
+   
+   function drawColorCaster5() {
+      if (colorCaster !== null) {
+         ctx5.font = "25px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         ctx5.fillText(colorCaster, cColorCaster5x, cColorCaster5y);
+      }
+   };
+   
+   function drawRScore5() {
+      if (redScore !== null) {
+         ctx5.font = "40px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         ctx5.fillText(redScore, cRedScore5x, cRedScore5y);
+      }
+   }
+   
+   function drawBScore5() {
+      if (blueScore !== null) {
+         ctx5.font = "40px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         ctx5.fillText(blueScore, cBlueScore5x, cBlueScore5y);
+      }
+   }
+   
+   function drawRScore25() {
+      if (redScore !== null) {
+         ctx5.font = "30px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         if(switchS.checked == false) { 
+            redScore5 = redScore
+            } else {
+               redScore5 = blueScore
+            }
+         ctx5.fillText(redScore5, cRedScore25x, cRedScore25y);
+      }
+   }
+   
+   function drawBScore25() {
+      if (blueScore !== null) {
+         ctx5.font = "30px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         if(switchS.checked == false) { 
+            blueScore5 = blueScore
+            } else {
+               blueScore5 = redScore
+            }
+         ctx5.fillText(blueScore5, cBlueScore25x, cBlueScore25y);
+      }
+   }
+   
+   function drawRteam5() {
+      if (redTeam !== null) {
+         ctx5.font = "16px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         ctx5.fillText(redTeam, cRedTeam5x, cRedTeam5y);
+      }
+   }
+   
+   function drawBteam5() {
+      if (blueTeam !== null) {
+         ctx5.font = "16px " + fontStyle;
+         ctx5.textAlign = "center";
+         ctx5.fillStyle = "white";
+         ctx5.fillText(blueTeam, cBlueTeam5x, cBlueTeam5y);
+      }
+   }
+   
+   function drawTest5() {
+      ctx5.font = "20px " + fontStyle;
+      // ctx2.textAlign = "center";
+      ctx5.fillStyle = "red";
+      ctx5.fillText("test", 315, 795);
+      //left is 15
+      //right is 315
+      //bottom is 965
+      //top is 795 var.sync = false
+   }
+   }
+   
+   imageObj15.src = overlay5
+   
+   imageObj15.onload = function() {
+      ctx5.drawImage(imageObj15, 0, 0, 1920, 1080);
+   
+      imageObjSchedule5.src = scheduleImg1G
+      imageObjSchedule5.onload = function() {
+      ctx5.drawImage(imageObjSchedule5, 0, 0, 1920, 1080)
+      // drawTest();
+         imageObj25.src = blueSide
+   
+      imageObj25.onload = function() {   
+               var width5 = imageObj25.naturalWidth   // Current image width2
+               var height5 = imageObj25.naturalHeight   // Current image height2
+   
+                 // Check if the current width2 is larger than the max
+                 if(width5 > maxBWidth5){
+                  ratioB5 = maxBWidth5 / width5;   // get ratio for scaling image
+                  newBWidth5 = maxBWidth5; // Set new width2
+                  newBHeight5 = height5 * ratioB5;  // Scale height2 based on ratio
+                  height5 = height5 * ratioB5;    // Reset height2 to match scaled image
+                  width5 = width5 * ratioB5;    // Reset width2 to match scaled image
+              }
+      
+              // Check if current height2 is larger than max
+              if(height5 > maxBHeight5){
+                  ratioB5 = maxBHeight5 / height5; // get ratio for scaling image
+                  newBHeight5 = maxBHeight5   // Set new height2
+                  newBWidth5 = width5 * ratioB5    // Scale width2 based on ratio
+                  width5 = width5 * ratioB5;    // Reset width2 to match scaled image
+                  height5 = height5 * ratioB5;    // Reset height2 to match scaled image
+              }
+              xBPlacement5 = cXBPlacement5 - (width5 / 2);
+              yBPlacement5 = cYBPlacement5 - (height5 / 2);
+   
+              //x, y, width, height
+            //   ctx2.save();
+            //   let region = new Path2D();
+            //   region.rect(0, 57, 1320, 68); 
+   
+            // var grd11 = ctx2.createLinearGradient(0, 57, 408, 0);
+            // grd11.addColorStop(0, bColor);
+            // grd11.addColorStop(1, "transparent");
+            // // Fill with gradient
+            //   ctx2.stroke()
+            //   ctx2.clip(region, "evenodd");
+            //   ctx2.fillStyle = grd11;
+            //   ctx2.fillRect(0, 57, 1320, 68); 
+            //   ctx2.globalAlpha = 0.6;
+   
+      
+         ctx5.drawImage(imageObj25, xBPlacement5, yBPlacement5, width5, height5);
+         //schedule
+         // ctx2.restore();
+         // if(switchS.checked == false) {
+         //    imageObj52.src = blueSide
+         //    } else {
+         //       imageObj52.src = redSide
+         //    }
+   
+         // imageObj52.onload = function() {   
+         //          var width2 = imageObj52.naturalWidth   // Current image width2
+         //          var height2 = imageObj52.naturalHeight   // Current image height2
+      
+         //            // Check if the current width2 is larger than the max
+         //            if(width2 > maxBWidth22){
+         //             ratioB2 = maxBWidth22 / width2;   // get ratio for scaling image
+         //             newBWidth2 = maxBWidth22; // Set new width2
+         //             newBHeight2 = height2 * ratioB2;  // Scale height2 based on ratio
+         //             height2 = height2 * ratioB2;    // Reset height2 to match scaled image
+         //             width2 = width2 * ratioB2;    // Reset width2 to match scaled image
+         //         }
+         
+         //         // Check if current height2 is larger than max
+         //         if(height2 > maxBHeight22){
+         //             ratioB2 = maxBHeight22 / height2; // get ratio for scaling image
+         //             newBHeight2 = maxBHeight22   // Set new height2
+         //             newBWidth2 = width2 * ratioB2    // Scale width2 based on ratio
+         //             width2 = width2 * ratioB2;    // Reset width2 to match scaled image
+         //             height2 = height2 * ratioB2;    // Reset height2 to match scaled image
+         //         }
+         //         xBPlacement2 = cXBPlacement22 - (width2 / 2);
+         //         yBPlacement2 = cYBPlacement22 - (height2 / 2);
+      
+         //         //x, y, width, height
+         //         ctx2.save();
+         //         let region = new Path2D();
+         //         region.rect(0, 57, 1320, 68); 
+      
+         //       var grd11 = ctx2.createLinearGradient(0, 57, 408, 0);
+         //       grd11.addColorStop(0, bColor);
+         //       grd11.addColorStop(1, "transparent");
+         //       // Fill with gradient
+         //         ctx2.stroke()
+         //         ctx2.clip(region, "evenodd");
+         //         ctx2.fillStyle = grd11;
+         //         ctx2.fillRect(0, 57, 1320, 68); 
+         //         ctx2.globalAlpha = 0.6;
+      
+         
+         //    ctx2.drawImage(imageObj52, xBPlacement2, yBPlacement2, width2, height2);
+         //    //schedule
+         //    ctx2.restore();
+   
+         //schedule
+   
+            imageObj35.src = redSide
+   
+         imageObj35.onload = function() {  
+            var width5 = imageObj35.naturalWidth   // Current image width2
+            var height5 = imageObj35.naturalHeight   // Current image height2
+   
+              // Check if the current width2 is larger than the max
+              if(width5 > maxRWidth5){
+               ratioR5 = maxRWidth5 / width5;   // get ratio for scaling image
+               newRWidth5 = maxRWidth5; // Set new width2
+               newRHeight5 = height5 * ratioR5;  // Scale height2 based on ratio
+               height5 = height5 * ratioR5;    // Reset height2 to match scaled image
+               width5 = width5 * ratioR5;    // Reset width2 to match scaled image
+           }
+   
+           // Check if current height2 is larger than max
+           if(height5 > maxRHeight5){
+               ratioR5 = maxRHeight5 / height5; // get ratio for scaling image
+               newRHeight5 = maxRHeight5   // Set new height2
+               newRWidth5 = width5 * ratioR5    // Scale width2 based on ratio
+               width5 = width5 * ratioR5;    // Reset width2 to match scaled image
+               height5 = height5 * ratioR5;    // Reset height2 to match scaled image
+           }
+           xRPlacement5 = cXRPlacement5 - (width5 / 2);
+           yRPlacement5 = cYRPlacement5 - (height5 / 2);
+                      //x, y, width, height
+   
+                  //     ctx2.save();
+                  //     let region = new Path2D();
+                  //     region.rect(0, 793, 1320, 68); 
+           
+                  //   var grd11 = ctx2.createLinearGradient(0, 793, 408, 850);
+                  //   grd11.addColorStop(0, rColor);
+                  //   grd11.addColorStop(1, "transparent");
+                  //   // Fill with gradient
+                  //     ctx2.stroke()
+                  //     ctx2.clip(region, "evenodd");
+                  //     ctx2.fillStyle = grd11;
+                  //     ctx2.fillRect(0, 793, 1320, 68); 
+                  //     ctx2.globalAlpha = 0.6;
+           
+            ctx5.drawImage(imageObj35, xRPlacement5, yRPlacement5, width5, height5);
+   
+            // ctx2.restore();
+            // if(switchS.checked == false) {
+            //    imageObj62.src = redSide
+            //    } else {
+            //       imageObj62.src = blueSide
+            //    }
+   
+            // imageObj62.onload = function() {  
+            //    var width2 = imageObj62.naturalWidth   // Current image width2
+            //    var height2 = imageObj62.naturalHeight   // Current image height2
+      
+            //      // Check if the current width2 is larger than the max
+            //      if(width2 > maxRWidth22){
+            //       ratioR2 = maxRWidth22 / width2;   // get ratio for scaling image
+            //       newRWidth2 = maxRWidth22; // Set new width2
+            //       newRHeight2 = height2 * ratioR2;  // Scale height2 based on ratio
+            //       height2 = height2 * ratioR2;    // Reset height2 to match scaled image
+            //       width2 = width2 * ratioR2;    // Reset width2 to match scaled image
+            //   }
+      
+            //   // Check if current height2 is larger than max
+            //   if(height2 > maxRHeight22){
+            //       ratioR2 = maxRHeight22 / height2; // get ratio for scaling image
+            //       newRHeight2 = maxRHeight22   // Set new height2
+            //       newRWidth2 = width2 * ratioR2    // Scale width2 based on ratio
+            //       width2 = width2 * ratioR2;    // Reset width2 to match scaled image
+            //       height2 = height2 * ratioR2;    // Reset height2 to match scaled image
+            //   }
+            //   xRPlacement2 = cXRPlacement22 - (width2 / 2);
+            //   yRPlacement2 = cYRPlacement22 - (height2 / 2);
+            //              //x, y, width, height
+      
+            //              ctx2.save();
+            //              let region = new Path2D();
+            //              region.rect(0, 793, 1320, 68); 
+              
+            //            var grd11 = ctx2.createLinearGradient(0, 793, 408, 850);
+            //            grd11.addColorStop(0, rColor);
+            //            grd11.addColorStop(1, "transparent");
+            //            // Fill with gradient
+            //              ctx2.stroke()
+            //              ctx2.clip(region, "evenodd");
+            //              ctx2.fillStyle = grd11;
+            //              ctx2.fillRect(0, 793, 1320, 68); 
+            //              ctx2.globalAlpha = 0.6;
+              
+            //    ctx2.drawImage(imageObj62, xRPlacement2, yRPlacement2, width2, height2);
+      
+            //    ctx5.restore();
+   
+            imageObj45.src = eventLogo
+            imageObj45.onload = function() {
+               var width5 = imageObj45.naturalWidth 
+               var height5 = imageObj45.naturalHeight
+   
+                  if(width5 > maxLWidth5) {
+                     ratioL5 = maxLWidth5 / width5;
+                     newLWidth5 = maxLWidth5;
+                     newLHeight5 = height5 * ratioL5
+                     width5 = width5 * ratioL5
+                     height5 = height5 * ratioL5
+                  }
+   
+                  if(height5 > maxLHeight5){
+                     ratioL5 = maxLHeight5 / width5;
+                     newLHeight5 = maxLHeight5;
+                     newLWidth5 = width5 * ratioL5
+                     width5 = width5 * ratioL5
+                     height5 = height5 * ratioL5
+                  }
+   
+                  xLPlacement5 = cXLPacement5 - (width5 / 2);
+                  yLPlacement5 = cYLPacement5 - (height5 / 2);
+   
+                  drawTitle5();
+                  // drawPHBcaster2();
+                  // drawColorCaster2();
+                  // drawRScore5();
+                  // drawBScore5();
+                  // drawRteam5();
+                  // drawBteam5();
+                  drawWeek5();
+                  drawLeague5();
+                  // drawLeagueRScore5();
+                  // drawLeagueBScore5();
+                  drawBTag5();
+                  drawRTag5();
+                  drawRScore25();
+                  drawBScore25();
+   
+               ctx5.drawImage(imageObj45, xLPlacement5, yLPlacement5, width5, height5);
+               var img5 = c5.toDataURL("image/png");
+               // var x = document.createElement('IMG'); // is a node
+               // x.setAttribute("src", img2)
+               // x.setAttribute("width", "1920")
+               // x.setAttribute("height", "1080")
+               // document.appendChild(x);
+               document.appendChild('<img src="' + img5 + '" width="1920" height="1080"/>');
+            }
+         }
+      }
+   }
+   }
+   }
+   };								
+onSubmit();
