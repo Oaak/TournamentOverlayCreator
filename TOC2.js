@@ -44,6 +44,7 @@ var PHBcasterTwitter = document.getElementById("PHBcasterT").value
 var colorCasterTwitter = document.getElementById("colorCasterT").value
 var bTag = document.getElementById("blueTag").value
 var rTag = document.getElementById("redTag").value
+var missingLogo = 0
 
 if (PHBcasterTwitter.startsWith("@")) {
    PHBcasterTwitter = PHBcasterTwitter
@@ -233,13 +234,17 @@ function addImg(imgsrc) {
        if (document.getElementById('redTeamType').value == 1) {
    var uploadElement = document.getElementById('fileToUploadRed');
    var theFile = uploadElement.files[0];
+   if (theFile != undefined) {
    if (theFile.type.match("image.*")) {
      getAsImage(theFile);
    } else {
-     // unexpected type
+     onSubmit2()
    }
    } else {
       redSide = document.getElementById('urlToUploadRed').value
+      onSubmit2()
+   }
+   } else {
       onSubmit2()
    }
     }
@@ -260,10 +265,14 @@ function addImg(imgsrc) {
          if (document.getElementById('blueTeamType').value == 1) {
       var uploadElement = document.getElementById('fileToUploadBlue');
       var theFile = uploadElement.files[0];
+      if (theFile != undefined) {
       if (theFile.type.match("image.*")) {
         getAsImage2(theFile);
       } else {
-        // unexpected type
+         onSubmit3()
+      }
+      } else {
+      onSubmit3()
       }
       } else {
       blueSide = document.getElementById('urlToUploadBlue').value
@@ -287,10 +296,14 @@ function addImg(imgsrc) {
             if (document.getElementById('eventType').value == 1) {
          var uploadElement = document.getElementById('fileToUploadEvent');
          var theFile = uploadElement.files[0];
+         if (theFile != undefined) {
          if (theFile.type.match("image.*")) {
            getAsImage3(theFile);
          } else {
-           // unexpected type
+           execute();
+         }
+         } else {
+         execute()
          }
          } else {
          eventLogo = document.getElementById('urlToUploadEvent').value
@@ -345,6 +358,13 @@ bColor = document.getElementById("redColor").value
 // rTag = "MIZ"
 // bTag = "KIF"
 }
+
+if (eventLogo == "soon") {
+   missingLogo = 100
+} else {
+   missingLogo = 0
+}
+
 
 
 PHBcasterTwitter = document.getElementById("PHBcasterT").value
@@ -410,11 +430,11 @@ redTeamSliderxs = redTeamSliderx
 }
 
 
-cTitle1x = 110
+cTitle1x = 110 - missingLogo
 cTitle1y = 1022
-cWeek1x = 110
+cWeek1x = 110 - missingLogo
 cWeek1y = 1072
-cLeague1x = 110
+cLeague1x = 110 - missingLogo
 cLeague1y = 1047
 cPHBcaster1x = 145
 cPHBcaster1y = 0
@@ -460,7 +480,6 @@ cYRPlacement1 = ((0 + 42)/2) + redTeamSliders
 
 // xBPlacement1 = (137.5 - (width1 / 2)) + 314
 // yBPlacement1 = ((822 + 1013) / 2) - (height1 / 2)
-
 
 
 //coordinates
@@ -701,7 +720,7 @@ imageObj11.onload = function() {
 
          ctx1.restore();
 
-
+        if (eventLogo != "soon") {
          imageObj41.src = eventLogo
          imageObj41.onload = function() {
             var width1 = imageObj41.naturalWidth 
@@ -727,21 +746,9 @@ imageObj11.onload = function() {
                // yLPlacement1 = ((782 + 952) / 2) - (height1 / 2)
                xLPlacement1 = cXLPacement1 - (width1 / 2)
                yLPlacement1 = cYLPacement1 - (height1 / 2)
-
-               drawTitle1();
-               drawWeek1();
-               // drawPHBcaster1();
-               // drawColorCaster1();
-               drawRScore1();
-               drawBScore1();
-               drawRteam1();
-               drawBteam1();
-               drawWeek1();
-               drawLeague1();
-               drawLeagueRScore1();
-               drawLeagueBScore1();
                
             ctx1.drawImage(imageObj41, xLPlacement1, yLPlacement1, width1, height1);
+            
             var img1 = c1.toDataURL("image/png");
             var z = document.createElement('IMG'); // is a node
             z.setAttribute("src", img1)
@@ -751,6 +758,26 @@ imageObj11.onload = function() {
             document.appendChild(z);
             // document.appendChild('<img src="' + img1 + '" width="1920" height="1080"/>');
          }
+         } else {
+            drawTitle1();
+            drawWeek1();
+            // drawPHBcaster1();
+            // drawColorCaster1();
+            drawRScore1();
+            drawBScore1();
+            drawRteam1();
+            drawBteam1();
+            drawWeek1();
+            drawLeague1();
+            drawLeagueRScore1();
+            drawLeagueBScore1();
+            var img1 = c1.toDataURL("image/png");
+            var z = document.createElement('IMG'); // is a node
+            z.setAttribute("src", img1)
+            z.setAttribute("width", "1920")
+            z.setAttribute("height", "1080")
+            // z.innerHTML = img1;
+            document.appendChild(z);
       }
    }   
 };	
@@ -810,11 +837,11 @@ if(switchS.checked == false) {
    }
 
 
-cTitle2x = 110
+cTitle2x = 110 - missingLogo
 cTitle2y = 1022
-cWeek2x = 110
+cWeek2x = 110 - missingLogo
 cWeek2y = 1072
-cLeague2x = 110
+cLeague2x = 110 - missingLogo
 cLeague2y = 1047
 cPHBcaster2x = 1521
 cPHBcaster2y = 835
@@ -1215,7 +1242,7 @@ imageObj12.onload = function() {
             ctx2.drawImage(imageObj62, xRPlacement2, yRPlacement2, width2, height2);
    
             ctx2.restore();
-
+            if (eventLogo != "soon") {
          imageObj42.src = eventLogo
          imageObj42.onload = function() {
             var width2 = imageObj42.naturalWidth 
@@ -1240,23 +1267,26 @@ imageObj12.onload = function() {
                xLPlacement2 = cXLPacement2 - (width2 / 2);
                yLPlacement2 = cYLPacement2 - (height2 / 2);
 
-               drawTitle2();
-               // drawPHBcaster2();
-               // drawColorCaster2();
-               drawRScore2();
-               drawBScore2();
-               drawRteam2();
-               drawBteam2();
-               drawWeek2();
-               drawLeague2();
-               drawLeagueRScore2();
-               drawLeagueBScore2();
-               drawBTag2();
-               drawRTag2();
-               drawRScore22();
-               drawBScore22();
+
 
             ctx2.drawImage(imageObj42, xLPlacement2, yLPlacement2, width2, height2);
+         }
+         }
+         drawTitle2();
+         // drawPHBcaster2();
+         // drawColorCaster2();
+         drawRScore2();
+         drawBScore2();
+         drawRteam2();
+         drawBteam2();
+         drawWeek2();
+         drawLeague2();
+         drawLeagueRScore2();
+         drawLeagueBScore2();
+         drawBTag2();
+         drawRTag2();
+         drawRScore22();
+         drawBScore22();
             var img2 = c2.toDataURL("image/png");
             // var x = document.createElement('IMG'); // is a node
             // x.setAttribute("src", img2)
@@ -1271,7 +1301,6 @@ imageObj12.onload = function() {
 }
 }
 };								
-}
 //START OF THIRD PAGE
 
 var c3=document.getElementById("overlay3");
@@ -1320,11 +1349,11 @@ if(switchS.checked == false) {
       redTeamSliderxs = blueTeamSliderx * -1
    }
 
-cTitle3x = 110
+cTitle3x = 110 - missingLogo
 cTitle3y = 1022
-cWeek3x = 110
+cWeek3x = 110 - missingLogo
 cWeek3y = 1072
-cLeague3x = 110
+cLeague3x = 110 - missingLogo
 cLeague3y = 1047
 cPHBcaster3x = (571 + 857)/2
 cPHBcaster3y = ((493 + 517)/2) + 10
@@ -1748,6 +1777,7 @@ imageObj13.onload = function() {
         yRPlacement3 = cYRPlacement3 - (height3 / 2)
         
          ctx3.drawImage(imageObj33, xRPlacement3, yRPlacement3, width3, height3);
+         if (eventLogo != "soon") {
          imageObj43.src = eventLogo
          imageObj43.onload = function() {
             var width3 = imageObj43.naturalWidth 
@@ -1775,34 +1805,36 @@ imageObj13.onload = function() {
                // cXLPacement3 = (0 + 110)/2
                // cYLPacement3 = (960 + 1080)/2
 
-               drawTitle3();
-               drawPHBcaster3();
-               drawColorCaster3();
-               drawPHBcasterT3();
-               drawColorCasterT3();
-               drawRScore3();
-               drawBScore3();
-               drawRteam3();
-               drawBteam3();
-               drawWeek3();
-               drawBTag3()
-               drawRTag3();
-               drawLeague3();
-               drawLeagueRScore3();
-               drawLeagueBScore3();
-               drawBScore32();
-               drawRScore32()
+
                // drawTest();
 
                xLPlacement3 = cXLPacement3 - (width3 / 2)
                yLPlacement3 = cYLPacement3 - (height3 / 2)
             ctx3.drawImage(imageObj43, xLPlacement3, yLPlacement3, width3, height3);
+         }
+         }
+         drawTitle3();
+         drawPHBcaster3();
+         drawColorCaster3();
+         drawPHBcasterT3();
+         drawColorCasterT3();
+         drawRScore3();
+         drawBScore3();
+         drawRteam3();
+         drawBteam3();
+         drawWeek3();
+         drawBTag3()
+         drawRTag3();
+         drawLeague3();
+         drawLeagueRScore3();
+         drawLeagueBScore3();
+         drawBScore32();
+         drawRScore32()
             var img3 = c3.toDataURL("image/png");
             document.appendChild('<img src="' + img3 + '" width="1920" height="1080"/>');
          }
       }
    }
-}
 }
 }
 };								
@@ -1859,11 +1891,11 @@ if(switchS.checked == false) {
    }
 
 
-cTitle4x = 110
+cTitle4x = 110 - missingLogo
 cTitle4y = 1022
-cWeek4x = 110
+cWeek4x = 110 - missingLogo
 cWeek4y = 1072
-cLeague4x = 110
+cLeague4x = 110 - missingLogo
 cLeague4y = 1047
 
 cPHBcaster4x = (58 + 377)/2
@@ -2433,7 +2465,7 @@ imageObj14.onload = function() {
                ctx4.drawImage(imageObj104, xTPlacement4, yTPlacement4, width4, height4);
          }
          }
-
+         if (eventLogo != "soon") {
          imageObj44.src = eventLogo
          imageObj44.onload = function() {
             var width4 = imageObj44.naturalWidth 
@@ -2458,6 +2490,8 @@ imageObj14.onload = function() {
                xLPlacement4 = cXLPacement4 - (width4 / 2)
                yLPlacement4 = cYLPacement4 - (height4 / 2)
             ctx4.drawImage(imageObj44, xLPlacement4, yLPlacement4, width4, height4);
+         }
+         }
             drawTitle4();
             drawPHBcaster4();
             drawColorCaster4();
@@ -2485,7 +2519,7 @@ imageObj14.onload = function() {
       }
    }
 };
-}	
+
 
 
 //START OF SECOND PAGE
@@ -2543,11 +2577,11 @@ imageObj14.onload = function() {
       }
    
    
-   cTitle5x = 110
+   cTitle5x = 110 - missingLogo
    cTitle5y = 1022
-   cWeek5x = 110
+   cWeek5x = 110 - missingLogo
    cWeek5y = 1072
-   cLeague5x = 110
+   cLeague5x = 110 - missingLogo
    cLeague5y = 1047
    cPHBcaster5x = 1521
    cPHBcaster5y = 835
@@ -2785,74 +2819,9 @@ imageObj14.onload = function() {
               xBPlacement5 = cXBPlacement5 - (width5 / 2);
               yBPlacement5 = cYBPlacement5 - (height5 / 2);
    
-              //x, y, width, height
-            //   ctx2.save();
-            //   let region = new Path2D();
-            //   region.rect(0, 57, 1320, 68); 
-   
-            // var grd11 = ctx2.createLinearGradient(0, 57, 408, 0);
-            // grd11.addColorStop(0, bColor);
-            // grd11.addColorStop(1, "transparent");
-            // // Fill with gradient
-            //   ctx2.stroke()
-            //   ctx2.clip(region, "evenodd");
-            //   ctx2.fillStyle = grd11;
-            //   ctx2.fillRect(0, 57, 1320, 68); 
-            //   ctx2.globalAlpha = 0.6;
    
       
          ctx5.drawImage(imageObj25, xBPlacement5, yBPlacement5, width5, height5);
-         //schedule
-         // ctx2.restore();
-         // if(switchS.checked == false) {
-         //    imageObj52.src = blueSide
-         //    } else {
-         //       imageObj52.src = redSide
-         //    }
-   
-         // imageObj52.onload = function() {   
-         //          var width2 = imageObj52.naturalWidth   // Current image width2
-         //          var height2 = imageObj52.naturalHeight   // Current image height2
-      
-         //            // Check if the current width2 is larger than the max
-         //            if(width2 > maxBWidth22){
-         //             ratioB2 = maxBWidth22 / width2;   // get ratio for scaling image
-         //             newBWidth2 = maxBWidth22; // Set new width2
-         //             newBHeight2 = height2 * ratioB2;  // Scale height2 based on ratio
-         //             height2 = height2 * ratioB2;    // Reset height2 to match scaled image
-         //             width2 = width2 * ratioB2;    // Reset width2 to match scaled image
-         //         }
-         
-         //         // Check if current height2 is larger than max
-         //         if(height2 > maxBHeight22){
-         //             ratioB2 = maxBHeight22 / height2; // get ratio for scaling image
-         //             newBHeight2 = maxBHeight22   // Set new height2
-         //             newBWidth2 = width2 * ratioB2    // Scale width2 based on ratio
-         //             width2 = width2 * ratioB2;    // Reset width2 to match scaled image
-         //             height2 = height2 * ratioB2;    // Reset height2 to match scaled image
-         //         }
-         //         xBPlacement2 = cXBPlacement22 - (width2 / 2);
-         //         yBPlacement2 = cYBPlacement22 - (height2 / 2);
-      
-         //         //x, y, width, height
-         //         ctx2.save();
-         //         let region = new Path2D();
-         //         region.rect(0, 57, 1320, 68); 
-      
-         //       var grd11 = ctx2.createLinearGradient(0, 57, 408, 0);
-         //       grd11.addColorStop(0, bColor);
-         //       grd11.addColorStop(1, "transparent");
-         //       // Fill with gradient
-         //         ctx2.stroke()
-         //         ctx2.clip(region, "evenodd");
-         //         ctx2.fillStyle = grd11;
-         //         ctx2.fillRect(0, 57, 1320, 68); 
-         //         ctx2.globalAlpha = 0.6;
-      
-         
-         //    ctx2.drawImage(imageObj52, xBPlacement2, yBPlacement2, width2, height2);
-         //    //schedule
-         //    ctx2.restore();
    
          //schedule
    
@@ -2883,72 +2852,11 @@ imageObj14.onload = function() {
            yRPlacement5 = cYRPlacement5 - (height5 / 2);
                       //x, y, width, height
    
-                  //     ctx2.save();
-                  //     let region = new Path2D();
-                  //     region.rect(0, 793, 1320, 68); 
-           
-                  //   var grd11 = ctx2.createLinearGradient(0, 793, 408, 850);
-                  //   grd11.addColorStop(0, rColor);
-                  //   grd11.addColorStop(1, "transparent");
-                  //   // Fill with gradient
-                  //     ctx2.stroke()
-                  //     ctx2.clip(region, "evenodd");
-                  //     ctx2.fillStyle = grd11;
-                  //     ctx2.fillRect(0, 793, 1320, 68); 
-                  //     ctx2.globalAlpha = 0.6;
            
             ctx5.drawImage(imageObj35, xRPlacement5, yRPlacement5, width5, height5);
-   
-            // ctx2.restore();
-            // if(switchS.checked == false) {
-            //    imageObj62.src = redSide
-            //    } else {
-            //       imageObj62.src = blueSide
-            //    }
-   
-            // imageObj62.onload = function() {  
-            //    var width2 = imageObj62.naturalWidth   // Current image width2
-            //    var height2 = imageObj62.naturalHeight   // Current image height2
-      
-            //      // Check if the current width2 is larger than the max
-            //      if(width2 > maxRWidth22){
-            //       ratioR2 = maxRWidth22 / width2;   // get ratio for scaling image
-            //       newRWidth2 = maxRWidth22; // Set new width2
-            //       newRHeight2 = height2 * ratioR2;  // Scale height2 based on ratio
-            //       height2 = height2 * ratioR2;    // Reset height2 to match scaled image
-            //       width2 = width2 * ratioR2;    // Reset width2 to match scaled image
-            //   }
-      
-            //   // Check if current height2 is larger than max
-            //   if(height2 > maxRHeight22){
-            //       ratioR2 = maxRHeight22 / height2; // get ratio for scaling image
-            //       newRHeight2 = maxRHeight22   // Set new height2
-            //       newRWidth2 = width2 * ratioR2    // Scale width2 based on ratio
-            //       width2 = width2 * ratioR2;    // Reset width2 to match scaled image
-            //       height2 = height2 * ratioR2;    // Reset height2 to match scaled image
-            //   }
-            //   xRPlacement2 = cXRPlacement22 - (width2 / 2);
-            //   yRPlacement2 = cYRPlacement22 - (height2 / 2);
-            //              //x, y, width, height
-      
-            //              ctx2.save();
-            //              let region = new Path2D();
-            //              region.rect(0, 793, 1320, 68); 
-              
-            //            var grd11 = ctx2.createLinearGradient(0, 793, 408, 850);
-            //            grd11.addColorStop(0, rColor);
-            //            grd11.addColorStop(1, "transparent");
-            //            // Fill with gradient
-            //              ctx2.stroke()
-            //              ctx2.clip(region, "evenodd");
-            //              ctx2.fillStyle = grd11;
-            //              ctx2.fillRect(0, 793, 1320, 68); 
-            //              ctx2.globalAlpha = 0.6;
-              
-            //    ctx2.drawImage(imageObj62, xRPlacement2, yRPlacement2, width2, height2);
       
             //    ctx5.restore();
-   
+            if (eventLogo != "soon") {
             imageObj45.src = eventLogo
             imageObj45.onload = function() {
                var width5 = imageObj45.naturalWidth 
@@ -2972,24 +2880,25 @@ imageObj14.onload = function() {
    
                   xLPlacement5 = cXLPacement5 - (width5 / 2);
                   yLPlacement5 = cYLPacement5 - (height5 / 2);
-   
-                  drawTitle5();
-                  // drawPHBcaster2();
-                  // drawColorCaster2();
-                  // drawRScore5();
-                  // drawBScore5();
-                  // drawRteam5();
-                  // drawBteam5();
-                  drawWeek5();
-                  drawLeague5();
-                  // drawLeagueRScore5();
-                  // drawLeagueBScore5();
-                  drawBTag5();
-                  drawRTag5();
-                  drawRScore25();
-                  drawBScore25();
-   
+
                ctx5.drawImage(imageObj45, xLPlacement5, yLPlacement5, width5, height5);
+            }
+            }
+            drawTitle5();
+            // drawPHBcaster2();
+            // drawColorCaster2();
+            // drawRScore5();
+            // drawBScore5();
+            // drawRteam5();
+            // drawBteam5();
+            drawWeek5();
+            drawLeague5();
+            // drawLeagueRScore5();
+            // drawLeagueBScore5();
+            drawBTag5();
+            drawRTag5();
+            drawRScore25();
+            drawBScore25();
                var img5 = c5.toDataURL("image/png");
                // var x = document.createElement('IMG'); // is a node
                // x.setAttribute("src", img2)
