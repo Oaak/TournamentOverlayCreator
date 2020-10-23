@@ -22,6 +22,8 @@ var overlay1 = "img-combine/InGameCompiled.png"
 var overlay2 = "img-combine/PostGameNexusCombined.png"
 var overlay3 = "img-combine/PickandBanOverlayCompiled.png"
 var overlay4 = "img-combine/ProdraftOverlayCombined.png"
+var overlay3b = "img-combine/PickandBanOverlayCompiledClean-01.png"
+var overlay4b = "img-combine/ProdraftOverlayCombinedClean-01.png"
 var scheduleImg4G = "img-combine/ScheduleSmall4Box-01.png"
 var scheduleImg3G = "img-combine/ScheduleSmall3Box-01.png"
 var scheduleImg2G = "img-combine/ScheduleSmall2Box-01.png"
@@ -39,6 +41,8 @@ var rColor = "red"
 var switchS = document.getElementById("switchSBox")
 var redSideTemp = "soon"
 var blueSideTemp = "soon"
+var cWebcams = document.getElementById("casterWebcams")
+
 
 var PHBcasterTwitter = document.getElementById("PHBcasterT").value
 var colorCasterTwitter = document.getElementById("colorCasterT").value
@@ -201,6 +205,11 @@ function switchSides() {
    onSubmit();
 }
 
+function cWeb() {
+   cWebcams = document.getElementById("casterWebcams")
+   onSubmit();
+}
+
 
 function addImg(imgsrc) {
    // var img = document.createElement("img");
@@ -220,16 +229,19 @@ function addImg(imgsrc) {
       var canvas2 = document.getElementById("overlay2");
       var canvas3 = document.getElementById("overlay3");
       var canvas4 = document.getElementById("overlay4");
+      var canvas5 = document.getElementById("overlay5");
     
       const context1 = canvas1.getContext('2d');
       const context2 = canvas2.getContext('2d');
       const context3 = canvas3.getContext('2d');
       const context4 = canvas4.getContext('2d');
+      const context5 = canvas5.getContext('2d');
     
       context1.clearRect(0, 0, canvas1.width, canvas1.height);
       context2.clearRect(0, 0, canvas2.width, canvas1.height);
       context3.clearRect(0, 0, canvas3.width, canvas3.height);
       context4.clearRect(0, 0, canvas4.width, canvas4.height);
+      context5.clearRect(0, 0, canvas5.width, canvas5.height);
 
        if (document.getElementById('redTeamType').value == 1) {
    var uploadElement = document.getElementById('fileToUploadRed');
@@ -748,6 +760,18 @@ imageObj11.onload = function() {
                yLPlacement1 = cYLPacement1 - (height1 / 2)
                
             ctx1.drawImage(imageObj41, xLPlacement1, yLPlacement1, width1, height1);
+            drawTitle1();
+            drawWeek1();
+            // drawPHBcaster1();
+            // drawColorCaster1();
+            drawRScore1();
+            drawBScore1();
+            drawRteam1();
+            drawBteam1();
+            drawWeek1();
+            drawLeague1();
+            drawLeagueRScore1();
+            drawLeagueBScore1();
             
             var img1 = c1.toDataURL("image/png");
             var z = document.createElement('IMG'); // is a node
@@ -1576,7 +1600,11 @@ function drawTest3() {
 }
 }
 
-imageObj13.src = overlay3
+if(cWebcams.checked == false) {
+   imageObj13.src = overlay3
+} else {
+   imageObj13.src = overlay3b
+}
 
 imageObj13.onload = function() {
    ctx3.drawImage(imageObj13, 0, 0, 1920, 1080);
@@ -1932,8 +1960,8 @@ cYRPlacement4 = ((1028 + 1080)/2)
 
 cXBPlacement42 = ((0 + 230)/2) + blueTeamSliderxs
 cYBPlacement42 = ((0 + 64)/2) + blueTeamSliders
-cXRPlacement42 = ((1686 + 1920)/2) + redTeamSliders
-cYRPlacement42 = ((0 + 64)/2) + redTeamSliderxs
+cXRPlacement42 = ((1686 + 1920)/2) + redTeamSliderxs
+cYRPlacement42 = ((0 + 64)/2) + redTeamSliders
 
 
 cBTag4x = (480 + 681)/2
@@ -2172,7 +2200,12 @@ function drawTest4() {
 }
 }
 
-imageObj14.src = overlay4
+if(cWebcams.checked == false) {
+   imageObj14.src = overlay4
+} else {
+   imageObj14.src = overlay4b
+}
+
 
 imageObj14.onload = function() {
    ctx4.drawImage(imageObj14, 0, 0, 1920, 1080);
